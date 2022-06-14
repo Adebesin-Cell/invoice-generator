@@ -5860,6 +5860,11 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
+lucide@^0.61.0:
+  version "0.61.0"
+  resolved "https://registry.yarnpkg.com/lucide/-/lucide-0.61.0.tgz#97beb88a07238fa0b93274257b030bdd80350669"
+  integrity sha512-LiQ5eWUnDglox6SbxrZHccpcnJEc+oK7CzukXYFAj4Ni6UTBSZQ70XKiq+drDC8vMoJZNWlPzlaob4VpOJMEqQ==
+
 lz-string@^1.4.4:
   version "1.4.4"
   resolved "https://registry.yarnpkg.com/lz-string/-/lz-string-1.4.4.tgz#c0d8eaf36059f705796e1e344811cf4c498d3a26"
