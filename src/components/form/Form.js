@@ -2,6 +2,7 @@ import styles from "./Form.module.scss";
 import Input from "../UI/input/Input";
 import { Link } from "react-router-dom";
 import Button from "../UI/button/Button";
+import Checkbox from "../UI/checkbox/Checkbox";
 
 const Form = function () {
   return (
@@ -28,7 +29,14 @@ const Form = function () {
         />
       </div>
       <div className={`${styles.form__group} ${styles.form__box}`}>
-        <div className={styles.form__store}>&nbsp;</div>
+        <div className={styles.form__store}>
+          <div className={styles.form__check}>
+            <Checkbox className={styles.form__checkbox} />
+          </div>
+          <label htmlFor='remember-me' className={styles.form__remember}>
+            Remember me
+          </label>
+        </div>
         <Link className={styles.form__link} to='/reset-password'>
           Forgot Password?
         </Link>
