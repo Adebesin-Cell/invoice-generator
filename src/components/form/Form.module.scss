@@ -27,11 +27,16 @@
         border-width: 1px;
         border-style: solid;
         border-radius: 5px;
-        padding: 12px 16px;
+        padding: calc(var(--span-xs) + 2px) calc(var(--span-xs) + 6px);
         --tw-ring-offset-shadow: 0 0 #0000;
         --tw-ring-shadow: 0 0 #0000;
         --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
         box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        transition: all 300ms;
+
+        &:focus {
+            border-color: var(--blue);
+        }
     }
 
     &__link {
@@ -41,5 +46,45 @@
         line-height: 19px;
         color: var(--blue);
         text-decoration: none;
+    }
+
+    &__button--box {
+        margin-top: var(--span-s);
+    }
+
+    &__button {
+        --tw-border-opacity: 1;
+        --color-slate-200: 226 232 240;
+        border-color: rgb(var(--color-slate-200) / var(--tw-border-opacity));
+        border-width: 1px;
+        border-style: solid;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        padding: calc(var(--span-xs) + 2px) calc(var(--span-xs) + 6px);
+        border-radius: 5px;
+        font-size: calc(var(--size-s));
+        font-weight: var(--weight-lg);
+        line-height: 19px;
+        width: 8rem;
+        --tw-ring-offset-shadow: 0 0 #0000;
+        --tw-ring-shadow: 0 0 #0000;
+        --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+
+        &--box {
+            display: flex;
+            gap: 8px;
+        }
+
+        &--blue {
+            background: var(--blue);
+            color: var(--white);
+        }
+
+        &--white {
+            background: var(--white);
+            color: var(--dark-blue);
+        }
     }
 }

@@ -38,8 +38,14 @@ const Form = function () {
           text='Login'
           role='submit'
           type='submit'
-          className={styles.form__button}
+          className={`${styles.form__button} ${styles["form__button--blue"]}`}
         />
+        <Link
+          to='/register'
+          className={`${styles.form__button} ${styles["form__button--white"]}`}
+        >
+          Register
+        </Link>
       </div>
     </form>
   );

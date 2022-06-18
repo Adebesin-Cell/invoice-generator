@@ -25,14 +25,14 @@
 
     &:-webkit-autofill {
         color: var(--input);
-        box-shadow: 0 0 0px 1000px inset !important;
+        box-shadow: 0 0 0px 1000px var(--white) inset !important;
         -webkit-text-fill-color: var(--input) !important;
         font-family: var(--Inter);
         font-size: var(--size-m);
         font-weight: var(--weight-sm);
         line-height: 23px;
         text-align: left;
-        border: 1px solid transparent !important;
+        border: 1px solid var(--blue) !important;
         outline: none !important;
     }
 }
