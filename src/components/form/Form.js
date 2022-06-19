@@ -55,6 +55,13 @@ const Form = function () {
           Register
         </Link>
       </div>
+      <div className={styles.form__agreement}>
+        <p className={styles["form__agreement--text"]}>
+          By signin up, you agree to our{" "}
+          <Link to='our-terms'>Terms and Conditions</Link> &{" "}
+          <Link to='/our-policy'>Privacy Policy</Link>.
+        </p>
+      </div>
     </form>
   );
 };
