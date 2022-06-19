@@ -109,6 +109,20 @@
 
     &__link {
 
+        &--active {
+            background: var(--nav-active-bg) !important;
+
+            svg {
+                path {
+                    fill: var(--blue) !important;
+                }
+            }
+        }
+
+        &--active &__text {
+            color: var(--blue) !important;
+        }
+
         &--nav {
             display: flex;
             gap: var(--span-xs);
@@ -123,20 +137,7 @@
             text-decoration: none;
             transition: all 300ms;
             background: var(--white);
-
-            &--active {
-                background: var(--nav-active-bg);
-
-                svg {
-                    path {
-                        fill: var(--blue);
-                    }
-                }
-            }
-
-            &--active &__text {
-                color: var(--blue);
-            }
+            border-radius: 5px;
 
             &:hover {
                 background: var(--nav-hover);
