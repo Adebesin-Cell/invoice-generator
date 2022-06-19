@@ -10,7 +10,7 @@ const Button = function (props) {
       role={props.role}
       onClick={props.onClick}
     >
-      {props.text}
+      {props.children}
     </button>
   );
 };

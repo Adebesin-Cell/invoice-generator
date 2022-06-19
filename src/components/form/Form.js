@@ -47,7 +47,9 @@ const Form = function () {
           role='submit'
           type='submit'
           className={`${styles.form__button} ${styles["form__button--blue"]}`}
-        />
+        >
+          Login
+        </Button>
         <Link
           to='/register'
           className={`${styles.form__button} ${styles["form__button--white"]}`}

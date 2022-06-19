@@ -11,7 +11,7 @@ const LoginForm = function () {
           <div className={styles.login__header}>
             <a href='/' className={styles.login__link}>
               <LogoSmall />
-              <span>My Business</span>
+              <span>Bizz</span>
             </a>
           </div>
           <div className={styles.login__body}>

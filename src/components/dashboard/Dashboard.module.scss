@@ -1,0 +1,61 @@
+.view {
+    position: relative;
+    flex: 1 1 0%;
+
+    &__container {
+        padding: calc(var(--span-xl) + 6px);
+        min-height: 100%;
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+
+        &-image {
+            display: block;
+            width: 150px;
+            height: 150px;
+        }
+    }
+
+    &__intro {
+        padding-left: calc(var(--span-s) + 4px);
+        padding-bottom: calc(var(--span-xl) + 6px);
+    }
+
+    &__heading {
+        font-family: var(--Inter);
+        font-size: calc(var(--size-l) + 3px);
+        font-weight: var(--weight-md);
+        text-align: left;
+        line-height: 30px;
+        color: var(--deep_blue);
+    }
+
+    &__help {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+
+        &--icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: var(--white);
+            filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.1));
+            z-index: 9;
+            color: var(--text-black--3);
+
+            svg {
+                width: 21px;
+                height: 21px;
+                stroke: var(--text-black--3);
+            }
+        }
+    }
+}
