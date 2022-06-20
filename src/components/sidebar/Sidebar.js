@@ -4,12 +4,18 @@ import NavigationContext from "../../store/navigation-context";
 import LogoSidebar from "../UI/logo/LogoSidebar";
 import Button from "../UI/button/Button";
 import { ReactComponent as DashboardIcon } from "../../assets/svgs/icon-dashboard.svg";
+import { ReactComponent as InvoiceBuilder } from "../../assets/svgs/icon-invoice-builder.svg";
+import { ReactComponent as Report } from "../../assets/svgs/icon-shop.svg";
+import { ReactComponent as Cart } from "../../assets/svgs/icon-cart-smooth.svg";
+import { ReactComponent as Settings } from "../../assets/svgs/icon-settings-outline.svg";
+import { ReactComponent as EllipsisVertical } from "../../assets/svgs/icon-ellipsis-vertical.svg";
+import { ReactComponent as Information } from "../../assets/svgs/icon-information-smooth.svg";
 import styles from "./Sidebar.module.scss";
 
 const Sidebar = function (props) {
   const ctx = useContext(NavigationContext);
 
-  console.log(ctx.pathname);
+  console.log(ctx);
 
   const ActiveClass = `${styles["sidebar__link--nav"]} ${styles["sidebar__link--active"]}`;
   const InActiveClass = `${styles["sidebar__link--nav"]}`;
@@ -36,6 +42,7 @@ const Sidebar = function (props) {
             className={({ isActive }) =>
               isActive ? ActiveClass : InActiveClass
             }
+            name='my dashboard'
           >
             <span className={styles.sidebar__icon}>
               <DashboardIcon />
@@ -43,11 +50,110 @@ const Sidebar = function (props) {
             <span className={styles.sidebar__text}>My Dashboard</span>
           </NavLink>
         </li>
+        <ul className={styles.sidebar__list}>
+          <h3 className={styles.sidebar__heading}>Features</h3>
+          <div className={styles.sidebar__box}>
+            <li className={styles.sidebar__item}>
+              <NavLink
+                to='/invoice'
+                className={({ isActive }) =>
+                  isActive ? ActiveClass : InActiveClass
+                }
+                name='invoice builder'
+              >
+                <span className={styles.sidebar__icon}>
+                  <InvoiceBuilder />
+                </span>
+                <span className={styles.sidebar__text}>Invoice Builder</span>
+              </NavLink>
+            </li>
+            <li className={styles.sidebar__item}>
+              <NavLink
+                to='/sales'
+                className={({ isActive }) =>
+                  isActive ? ActiveClass : InActiveClass
+                }
+                name='sales order'
+              >
+                <span className={styles.sidebar__icon}>
+                  <DashboardIcon />
+                </span>
+                <span className={styles.sidebar__text}>Sales Order</span>
+              </NavLink>
+            </li>
+            <li className={styles.sidebar__item}>
+              <NavLink
+                to='/report'
+                className={({ isActive }) =>
+                  isActive ? ActiveClass : InActiveClass
+                }
+                name='report'
+              >
+                <span className={styles.sidebar__icon}>
+                  <Report className={styles["sidebar__icon--lg"]} />
+                </span>
+                <span className={styles.sidebar__text}>Report</span>
+              </NavLink>
+            </li>
+            <li className={styles.sidebar__item}>
+              <NavLink
+                to='/products'
+                className={({ isActive }) =>
+                  isActive ? ActiveClass : InActiveClass
+                }
+                name='products'
+              >
+                <span className={styles.sidebar__icon}>
+                  <Cart />
+                </span>
+                <span className={styles.sidebar__text}>Products</span>
+              </NavLink>
+            </li>
+          </div>
+        </ul>
+        <ul className={styles.sidebar__list}>
+          <h3 className={styles.sidebar__heading}>General</h3>
+          <div className={styles.sidebar__box}>
+            <li className={styles.sidebar__item}>
+              <NavLink
+                to='/documentation'
+                className={({ isActive }) =>
+                  isActive ? ActiveClass : InActiveClass
+                }
+                name='documentation'
+              >
+                <span className={styles.sidebar__icon}>
+                  <Information />
+                </span>
+                <span className={styles.sidebar__text}>Documentation</span>
+              </NavLink>
+            </li>
+            <li className={styles.sidebar__item}>
+              <NavLink
+                to='/settings'
+                className={({ isActive }) =>
+                  isActive ? ActiveClass : InActiveClass
+                }
+                name='settings'
+              >
+                <span className={styles.sidebar__icon}>
+                  <Settings />
+                </span>
+                <span className={styles.sidebar__text}>Settings</span>
+              </NavLink>
+            </li>
+          </div>
+        </ul>
       </nav>
       <div className={styles.sidebar__footer}>
-        <Button className={styles.sidebar__button}>
-          <span className={styles.sidebar__username}>LA</span>
-          <span className={styles.sidebar__name}>Lope Adebesin</span>
+        <Button className={styles.sidebar__button} role='options'>
+          <div className={styles.sidebar__info}>
+            <span className={styles.sidebar__username}>LA</span>
+            <span className={styles.sidebar__name}>Lope Adebesin</span>
+          </div>
+          <div className={styles.sidebar__option}>
+            <EllipsisVertical />
+          </div>
         </Button>
       </div>
     </div>

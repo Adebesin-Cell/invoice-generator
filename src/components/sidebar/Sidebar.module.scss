@@ -57,50 +57,10 @@
         padding-top: calc(var(--span-xs) + 2px);
     }
 
-    &__footer {
-        position: absolute;
-        bottom: 0px;
-        width: 100%;
-        padding: calc(var(--span-xs) + 2px) var(--span-s);
-        border-top: 1px solid var(--border);
-    }
-
-    &__button {
-        display: flex;
-        gap: var(--span-xs);
-        align-items: center;
-    }
-
-    &__username {
-        width: 32px;
-        height: 32px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        background: var(--bright_blue);
-        font-family: var(--Inter);
-        font-size: calc(var(--size-xs) - 1px);
-        font-weight: var(--weight-lg);
-        text-align: left;
-        line-height: 15px;
-        color: var(--white);
-    }
-
-    &__name {
-        font-family: var(--Inter);
-        font-size: calc(var(--size-s) - 1px);
-        font-weight: var(--weight-md);
-        text-align: left;
-        line-height: 15px;
-        color: var(--desaturated_blue);
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
 
     &__list {
         list-style-type: none;
+        margin-top: calc(var(--span-xs) + 6px);
     }
 
     &__item {
@@ -151,6 +111,12 @@
     }
 
     &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 16px;
+        height: 16px;
+
         svg {
             path {
                 fill: var(--nav-icon);
@@ -164,6 +130,90 @@
         text-align: left;
         line-height: 15px;
         text-transform: capitalize;
-        color: var(--nav-icon);
+        color: var(--nav-link);
+    }
+
+    &__heading {
+        padding: 4px calc(var(--span-xs) + 2px);
+        font-size: calc(var(--size-xs) - 2px);
+        font-weight: var(--weight-sm);
+        text-align: left;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: var(--nav-link);
+    }
+
+    &__box {
+        margin-top: 8px;
+        display: grid;
+        gap: 8px;
+    }
+
+    &__footer {
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        padding: calc(var(--span-xs) + 2px) var(--span-s);
+        border-top: 1px solid var(--border);
+    }
+
+    &__button {
+        width: 100%;
+        display: flex;
+        gap: var(--span-xs);
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__username {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background: var(--bright_blue);
+        font-family: var(--Inter);
+        font-size: calc(var(--size-xs) - 1px);
+        font-weight: var(--weight-lg);
+        text-align: left;
+        line-height: 15px;
+        color: var(--white);
+    }
+
+    &__name {
+        font-family: var(--Inter);
+        font-size: calc(var(--size-s) - 1px);
+        font-weight: var(--weight-md);
+        text-align: left;
+        line-height: 15px;
+        color: var(--desaturated_blue);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__info {
+        display: flex;
+        gap: var(--span-xs);
+        align-items: center;
+    }
+
+    &__option {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        background: var(--white);
+        border: 1px solid var(--options-border);
+        border-radius: 4px;
+
+        svg {
+            width: 16px;
+            height: 16px;
+            fill: var(--nav-icon);
+        }
     }
 }
