@@ -2,40 +2,8 @@ import Card from "../../utils/card/Card";
 import overlay from "../../assets/images/overlay.png";
 import styles from "./Dashboard.module.scss";
 import { ReactComponent as Help } from "../../assets/svgs/icon-help.svg";
-import { ReactComponent as Documentation } from "../../assets/svgs/icon-information.svg";
-import { ReactComponent as Play } from "../../assets/svgs/icon-play.svg";
-import { ReactComponent as Apps } from "../../assets/svgs/icon-apps.svg";
-
-const Externals = [
-  {
-    id: 1,
-    title: "Documentation",
-    link: "/",
-    icon: <Documentation />,
-    outerBg: "#f0f0ff",
-    innerBg: "#4945ff",
-    description: "Discover the essential concepts, guides and instructions.",
-  },
-  {
-    id: 2,
-    title: "Tutorial",
-    link: "/",
-    icon: <Play />,
-    outerBg: "#f1f5f9",
-    innerBg: "#054232",
-    description: "Follow step-by-step instructions to use and customize Bizz.",
-  },
-
-  {
-    id: 3,
-    title: "Blog",
-    icon: <Apps />,
-    link: "/",
-    outerBg: "#ffefb9",
-    innerBg: "#faa11e",
-    description: "Read the latest news about Bizz and the market.",
-  },
-];
+import { ReactComponent as External } from "../../assets/svgs/icon-open-outline.svg";
+import { ExternalLinks as Externals, Statistics } from "../../data/Data";
 
 const DashboardView = function (props) {
   return (
@@ -55,6 +23,18 @@ const DashboardView = function (props) {
             temporibus laboriosam quas nisi dolorem ducimus, dolores pariatur
             qui numquam, illo ullam porro recusandae deserunt vel.
           </p>
+          <a
+            name='See our blog'
+            href='/'
+            target='_blank'
+            rel='noopener noreferrer'
+            className={styles.view__go}
+          >
+            <span className='text'>See more on the blog</span>
+            <span className={styles["view__go--icon"]}>
+              <External />
+            </span>
+          </a>
         </div>
         <div className={styles.view__wrapper}>
           <div className={styles.view__external}>
@@ -95,6 +75,50 @@ const DashboardView = function (props) {
                 </li>
               ))}
             </ul>
+          </div>
+          <div className={styles.statistics}>
+            <Card>
+              <div className={styles.statistics__container}>
+                <h1 className={styles.statistics__heading}>Statistics</h1>
+                <p className={styles.statistics__paragraph}>
+                  View your business statistics: your number of products, your
+                  total sales, your customers, your total revenue.
+                </p>
+                <a
+                  name='Testimonials'
+                  href='/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className={styles.statistics__go}
+                >
+                  <span className='text'>See our Testimonials</span>
+                  <span className={styles["statistics__go--icon"]}>
+                    <External />
+                  </span>
+                </a>
+                <div className={styles.statistics__wrapper}>
+                  {Statistics.map((stat) => (
+                    <div key={stat.id} className={styles.statistics__box}>
+                      <div
+                        className={styles.statistics__icon}
+                        style={{
+                          backgroundColor: stat.background,
+                          color: stat.color,
+                        }}
+                      >
+                        {stat.icon}
+                      </div>
+                      <div className={styles.statistics__details}>
+                        <h3 className={styles.statistics__title}>
+                          {stat.amountinwords}
+                        </h3>
+                        <p className={styles.statistics__name}>{stat.title}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </Card>
           </div>
         </div>
         <div className={styles.view__help}>
