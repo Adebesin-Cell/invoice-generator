@@ -1,21 +1,26 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
 import NavigationContext from "../../store/navigation-context";
 import LogoSidebar from "../UI/logo/LogoSidebar";
 import Button from "../UI/button/Button";
-import { ReactComponent as DashboardIcon } from "../../assets/svgs/icon-dashboard.svg";
-import { ReactComponent as InvoiceBuilder } from "../../assets/svgs/icon-invoice-builder.svg";
-import { ReactComponent as Report } from "../../assets/svgs/icon-shop.svg";
-import { ReactComponent as Cart } from "../../assets/svgs/icon-cart-smooth.svg";
-import { ReactComponent as Settings } from "../../assets/svgs/icon-settings-outline.svg";
-import { ReactComponent as EllipsisVertical } from "../../assets/svgs/icon-ellipsis-vertical.svg";
-import { ReactComponent as Information } from "../../assets/svgs/icon-information-smooth.svg";
+import SidebarMenu from "./SidebarMenu";
+import { Icons } from "../UI/icons/Icons";
 import styles from "./Sidebar.module.scss";
+import { ReactComponent as Report } from "../../assets/svgs/icon-shop.svg";
 
 const Sidebar = function (props) {
+  const [isClosed, setIsClosed] = useState(true);
   const ctx = useContext(NavigationContext);
 
   console.log(ctx);
+
+  const toggleFooterMenuHandler = function (e) {
+    setIsClosed(!isClosed);
+  };
+
+  const setIsClosedHandler = function (e) {
+    setIsClosed(true);
+  };
 
   const ActiveClass = `${styles["sidebar__link--nav"]} ${styles["sidebar__link--active"]}`;
   const InActiveClass = `${styles["sidebar__link--nav"]}`;
@@ -44,9 +49,7 @@ const Sidebar = function (props) {
             }
             name='my dashboard'
           >
-            <span className={styles.sidebar__icon}>
-              <DashboardIcon />
-            </span>
+            <span className={styles.sidebar__icon}>{Icons.DashboardIcon}</span>
             <span className={styles.sidebar__text}>My Dashboard</span>
           </NavLink>
         </li>
@@ -62,7 +65,7 @@ const Sidebar = function (props) {
                 name='invoice builder'
               >
                 <span className={styles.sidebar__icon}>
-                  <InvoiceBuilder />
+                  {Icons.InvoiceBuilder}
                 </span>
                 <span className={styles.sidebar__text}>Invoice Builder</span>
               </NavLink>
@@ -76,7 +79,7 @@ const Sidebar = function (props) {
                 name='sales order'
               >
                 <span className={styles.sidebar__icon}>
-                  <DashboardIcon />
+                  {Icons.DashboardIcon}
                 </span>
                 <span className={styles.sidebar__text}>Sales Order</span>
               </NavLink>
@@ -103,9 +106,7 @@ const Sidebar = function (props) {
                 }
                 name='products'
               >
-                <span className={styles.sidebar__icon}>
-                  <Cart />
-                </span>
+                <span className={styles.sidebar__icon}>{Icons.Cart}</span>
                 <span className={styles.sidebar__text}>Products</span>
               </NavLink>
             </li>
@@ -123,7 +124,7 @@ const Sidebar = function (props) {
                 name='documentation'
               >
                 <span className={styles.sidebar__icon}>
-                  <Information />
+                  {Icons.Information}
                 </span>
                 <span className={styles.sidebar__text}>Documentation</span>
               </NavLink>
@@ -136,9 +137,7 @@ const Sidebar = function (props) {
                 }
                 name='settings'
               >
-                <span className={styles.sidebar__icon}>
-                  <Settings />
-                </span>
+                <span className={styles.sidebar__icon}>{Icons.Settings}</span>
                 <span className={styles.sidebar__text}>Settings</span>
               </NavLink>
             </li>
@@ -146,16 +145,19 @@ const Sidebar = function (props) {
         </ul>
       </nav>
       <div className={styles.sidebar__footer}>
-        <Button className={styles.sidebar__button} role='options'>
+        <Button
+          className={styles.sidebar__button}
+          role='options'
+          onClick={toggleFooterMenuHandler}
+        >
           <div className={styles.sidebar__info}>
             <span className={styles.sidebar__username}>LA</span>
             <span className={styles.sidebar__name}>Lope Adebesin</span>
           </div>
-          <div className={styles.sidebar__option}>
-            <EllipsisVertical />
-          </div>
+          <div className={styles.sidebar__option}>{Icons.EllipsisVertical}</div>
         </Button>
       </div>
+      {!isClosed && <SidebarMenu onClick={setIsClosedHandler} />}
     </div>
   );
 };

@@ -1,0 +1,63 @@
+@import "../../styles/animation.scss";
+
+.sidebar {
+    &__menu {
+        width: 100%;
+        padding-left: var(--span-s);
+        padding-right: var(--span-s);
+        position: absolute;
+        bottom: 50px;
+        animation: fadeUp 300ms linear 1;
+
+        &--list {
+            padding: 5px;
+            list-style-type: none;
+        }
+
+        &--item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &--link {
+            display: flex;
+            gap: var(--span-xs);
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--span-xs) calc(var(--span-xs) + 2px);
+            font-family: var(--Inter);
+            font-size: calc(var(--size-s) - 1px);
+            font-weight: var(--weight-sm);
+            text-align: left;
+            line-height: 15px;
+            color: var(--desaturated_blue);
+            text-decoration: none;
+            transition: all 300ms;
+            background: var(--white);
+            border-radius: 5px;
+
+            &:hover {
+                background: var(--nav-hover);
+            }
+
+            svg {
+                width: 18px;
+                height: 18px;
+            }
+
+            span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            &--dangerous {
+                color: red;
+
+                &:hover {
+                    background: rgba(255, 0, 0, 0.05);
+                }
+            }
+        }
+    }
+}

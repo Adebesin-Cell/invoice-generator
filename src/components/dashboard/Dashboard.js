@@ -3,7 +3,7 @@ import overlay from "../../assets/images/overlay.png";
 import styles from "./Dashboard.module.scss";
 import { ReactComponent as Help } from "../../assets/svgs/icon-help.svg";
 import { ReactComponent as External } from "../../assets/svgs/icon-open-outline.svg";
-import { ExternalLinks as Externals, Statistics } from "../../data/Data";
+import { Statistics } from "../../data/Data";
 
 const DashboardView = function (props) {
   return (
@@ -37,45 +37,7 @@ const DashboardView = function (props) {
           </a>
         </div>
         <div className={styles.view__wrapper}>
-          <div className={styles.view__external}>
-            <ul className={styles.view__list}>
-              {Externals.map((external) => (
-                <li key={external.id} className={styles.view__item}>
-                  <a
-                    name={external.title}
-                    href={external.link}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className={styles.view__link}
-                  >
-                    <Card>
-                      <div className={styles.view__box}>
-                        <div
-                          className={styles.view__icon}
-                          style={{ backgroundColor: external.outerBg }}
-                        >
-                          <div
-                            className={styles["view__icon--box"]}
-                            style={{ backgroundColor: external.innerBg }}
-                          >
-                            {external.icon}
-                          </div>
-                        </div>
-                        <div className={styles.view__details}>
-                          <h1 className={styles.view__header}>
-                            {external.title}
-                          </h1>
-                          <p className={styles.view__text}>
-                            {external.description}
-                          </p>
-                        </div>
-                      </div>
-                    </Card>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <div className={styles.view__products}>&nbsp;</div>
           <div className={styles.statistics}>
             <Card>
               <div className={styles.statistics__container}>
