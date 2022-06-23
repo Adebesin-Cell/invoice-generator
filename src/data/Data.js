@@ -78,7 +78,6 @@ export const ExternalLinks = [
 
 export const Sales = [
   {
-    id: new Date().toISOString().slice(0, 7),
     title: "Smoothie Hop",
     totalAmount: 4,
     orderNumber: "WP1247",
@@ -87,7 +86,6 @@ export const Sales = [
     currency: "NGN",
   },
   {
-    id: new Date().toISOString().slice(0, 7),
     title: "Make Up Kit",
     totalAmount: 1,
     orderNumber: "WP2297",
@@ -96,7 +94,6 @@ export const Sales = [
     currency: "NGN",
   },
   {
-    id: new Date().toISOString().slice(0, 7),
     title: "Beer",
     totalAmount: 12,
     orderNumber: "WP9239",
@@ -105,7 +102,6 @@ export const Sales = [
     currency: "NGN",
   },
   {
-    id: new Date().toISOString().slice(0, 7),
     title: "Nike Air XI",
     totalAmount: 1,
     orderNumber: "WP4447",
@@ -114,7 +110,6 @@ export const Sales = [
     currency: "NGN",
   },
   {
-    id: new Date().toISOString().slice(0, 7),
     title: "Smoothie Hop",
     totalAmount: 4,
     orderNumber: "WP1247",
@@ -123,7 +118,6 @@ export const Sales = [
     currency: "NGN",
   },
   {
-    id: new Date().toISOString().slice(0, 7),
     title: "Make Up Kit",
     totalAmount: 1,
     orderNumber: "WP2297",
@@ -132,7 +126,6 @@ export const Sales = [
     currency: "NGN",
   },
   {
-    id: new Date().toISOString().slice(0, 7),
     title: "Beer",
     totalAmount: 12,
     orderNumber: "WP9239",
@@ -141,7 +134,6 @@ export const Sales = [
     currency: "NGN",
   },
   {
-    id: new Date().toISOString().slice(0, 7),
     title: "Nike Air XI",
     totalAmount: 1,
     orderNumber: "WP4447",
@@ -150,7 +142,6 @@ export const Sales = [
     currency: "NGN",
   },
   {
-    id: new Date().toISOString().slice(0, 7),
     title: "Smoothie Hop",
     totalAmount: 4,
     orderNumber: "WP1247",
@@ -159,7 +150,6 @@ export const Sales = [
     currency: "NGN",
   },
   {
-    id: new Date().toISOString().slice(0, 7),
     title: "Make Up Kit",
     totalAmount: 1,
     orderNumber: "WP2297",
@@ -168,7 +158,6 @@ export const Sales = [
     currency: "NGN",
   },
   {
-    id: new Date().toISOString().slice(0, 7),
     title: "Beer",
     totalAmount: 12,
     orderNumber: "WP9239",
@@ -177,7 +166,6 @@ export const Sales = [
     currency: "NGN",
   },
   {
-    id: new Date().toISOString().slice(0, 7),
     title: "Nike Air XI",
     totalAmount: 1,
     orderNumber: "WP4447",

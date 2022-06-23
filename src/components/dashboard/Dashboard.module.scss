@@ -112,6 +112,11 @@
         }
     }
 
+    &__products {
+        padding-top: var(--span-xl);
+        padding-left: calc(var(--span-s) + 4px);
+    }
+
     &__external {
         display: flex;
         flex-direction: column;
@@ -430,6 +435,25 @@
         font-weight: var(--weight-sm);
         text-align: left;
         line-height: 19px;
+        color: rgb(15, 23, 42);
+    }
+}
+
+.products {
+    display: flex;
+    flex-direction: column;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__heading {
+        font-family: var(--Inter);
+        font-size: calc(var(--size-m) + 2px);
+        font-weight: var(--weight-lg);
+        text-align: left;
+        line-height: 25px;
         color: rgb(15, 23, 42);
     }
 }

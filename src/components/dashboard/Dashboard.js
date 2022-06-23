@@ -54,9 +54,9 @@ const DashboardView = function (props) {
                 </div>
                 <div className={styles.sales__body}>
                   <ul className={styles.sales__list}>
-                    {Sales.map((sale) => (
+                    {Sales.map((sale, i) => (
                       <li
-                        key={sale.id}
+                        key={i}
                         className={`${styles.sales__item} shadow .shadow-sm ring-slate-200 ring-1`}
                       >
                         <h3 className={styles.sales__title}>
@@ -117,6 +117,14 @@ const DashboardView = function (props) {
                 </div>
               </div>
             </Card>
+          </div>
+        </div>
+        <div className={styles.view__products}>
+          <div className={styles.products}>
+            <div className={styles.products__header}>
+              <h1 className={styles.products__heading}>Recent Products</h1>
+              <div className={styles.products__arrangement}>&nbsp;</div>
+            </div>
           </div>
         </div>
         <div className={styles.view__help}>
