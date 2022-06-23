@@ -1,9 +1,12 @@
+import { NavLink } from "react-router-dom";
 import Card from "../../utils/card/Card";
 import overlay from "../../assets/images/overlay.png";
 import styles from "./Dashboard.module.scss";
+import "../../styles/shadows.scss";
 import { ReactComponent as Help } from "../../assets/svgs/icon-help.svg";
 import { ReactComponent as External } from "../../assets/svgs/icon-open-outline.svg";
-import { Statistics } from "../../data/Data";
+import { ReactComponent as View } from "../../assets/svgs/icon-arrow-forward.svg";
+import { Statistics, Sales } from "../../data/Data";
 
 const DashboardView = function (props) {
   return (
@@ -37,9 +40,42 @@ const DashboardView = function (props) {
           </a>
         </div>
         <div className={styles.view__wrapper}>
-          <div className={styles.view__products}>&nbsp;</div>
+          <div className={styles.sales}>
+            <Card className='shadow shadow-xl rounded--md'>
+              <div className={styles.sales__container}>
+                <div className={styles.sales__header}>
+                  <h1 className={styles.sales__heading}>Recent Sales</h1>
+                  <NavLink className={styles.sales__link} to='/sales'>
+                    <span className={styles.sales__text}>View All</span>
+                    <span className={styles.sales__icon}>
+                      <View />
+                    </span>
+                  </NavLink>
+                </div>
+                <div className={styles.sales__body}>
+                  <ul className={styles.sales__list}>
+                    {Sales.map((sale) => (
+                      <li
+                        key={sale.id}
+                        className={`${styles.sales__item} shadow .shadow-sm ring-slate-200 ring-1`}
+                      >
+                        <h3 className={styles.sales__title}>
+                          <span>{sale.title}</span>
+                          <span>x{sale.totalAmount}</span>
+                        </h3>
+                        <p className={styles.sales__order}>
+                          {sale.orderNumber}
+                        </p>
+                        <p className={styles.sales__buyer}>{sale.buyer}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </Card>
+          </div>
           <div className={styles.statistics}>
-            <Card>
+            <Card className=''>
               <div className={styles.statistics__container}>
                 <h1 className={styles.statistics__heading}>Statistics</h1>
                 <p className={styles.statistics__paragraph}>
