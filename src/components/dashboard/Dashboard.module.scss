@@ -346,6 +346,11 @@
         justify-content: space-between;
         align-items: center;
         padding: calc(var(--span-s) + 4px) calc(var(--span-m) + 2px);
+
+        @media only screen and (max-width: 600px) {
+            padding-left: calc(var(--span-s) + 4px);
+            padding-right: calc(var(--span-s) + 4px);
+        }
     }
 
     &__heading {
@@ -417,6 +422,11 @@
         padding: calc(var(--span-s) + 4px) calc(var(--span-m) + 2px);
         border-bottom-left-radius: 12px;
         border-bottom-right-radius: 12px;
+
+        @media only screen and (max-width: 600px) {
+            padding-left: calc(var(--span-s) + 4px);
+            padding-right: calc(var(--span-s) + 4px);
+        }
     }
 
     &__list {
