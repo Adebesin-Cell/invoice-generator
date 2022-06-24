@@ -1,0 +1,6 @@
+postgres://kjhoeixlnpqibh:79452fff8cc6b21ac9430a652ff62015d6514ec502708322d044bca0da844817@ec2-44-197-128-108.compute-1.amazonaws.com:5432/d6ng4rgvuv636n
+
+--follow youtube tutorial
+--install postgres inside the strapi project
+--deploy using heroku cli -- install heroku CLI
+--

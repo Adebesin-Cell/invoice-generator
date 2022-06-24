@@ -1,10 +1,14 @@
-import { ReactComponent as Documentation } from "../assets/svgs/icon-information.svg";
-import { ReactComponent as Play } from "../assets/svgs/icon-play.svg";
-import { ReactComponent as Apps } from "../assets/svgs/icon-apps.svg";
 import { ReactComponent as Chart } from "../assets/svgs/icon-bar-chart.svg";
 import { ReactComponent as User } from "../assets/svgs/icon-user-smooth.svg";
 import { ReactComponent as Products } from "../assets/svgs/icon-products.svg";
 import { ReactComponent as Dollar } from "../assets/svgs/icon-dollar.svg";
+import ProductImage from "../assets/images/product--0.jpg";
+import ProductImageOne from "../assets/images/product--2.jpg";
+import ProductImageTwo from "../assets/images/product--3.jpg";
+import ProductImageThree from "../assets/images/product--4.jpg";
+import ProductImageFour from "../assets/images/product--5.jpg";
+import ProductImageFive from "../assets/images/product--6.jpg";
+import ProductImageSix from "../assets/images/product--1.jpg";
 
 export const Statistics = [
   {
@@ -42,37 +46,6 @@ export const Statistics = [
     amountinFigure: 550000,
     background: "#e5f8ed",
     color: "#28c76f",
-  },
-];
-
-export const ExternalLinks = [
-  {
-    id: 1,
-    title: "Documentation",
-    link: "/",
-    icon: <Documentation />,
-    outerBg: "#f0f0ff",
-    innerBg: "#4945ff",
-    description: "Discover the essential concepts, guides and instructions.",
-  },
-  {
-    id: 2,
-    title: "Tutorial",
-    link: "/",
-    icon: <Play />,
-    outerBg: "#f1f5f9",
-    innerBg: "#054232",
-    description: "Follow step-by-step instructions to use and customize Bizz.",
-  },
-
-  {
-    id: 3,
-    title: "Blog",
-    icon: <Apps />,
-    link: "/",
-    outerBg: "#ffefb9",
-    innerBg: "#faa11e",
-    description: "Read the latest news about Bizz and the market.",
   },
 ];
 
@@ -172,5 +145,50 @@ export const Sales = [
     buyer: "Khali James",
     price: 15000,
     currency: "NGN",
+  },
+];
+
+export const ProductsList = [
+  {
+    id: 1,
+    image: ProductImage,
+    title: "Classic Utility Jacket",
+    status: "in stock",
+    price: 110,
+    currency: "$",
+    sizesAvailable: ["XS", "S", "M", "L", "XL"],
+    comment: "Free shipping on all continental US orders.",
+  },
+  {
+    id: 2,
+    image: ProductImageOne,
+    title: "Nike Sneakers",
+    status: "in stock",
+    price: 39,
+    currency: "$",
+    sizesAvailable: ["XS", "S", "M", "L", "XL"],
+    comment: "Free shipping on all continental US orders.",
+  },
+
+  {
+    id: 3,
+    image: ProductImageTwo,
+    title: "Classic White Hoodie",
+    status: "in stock",
+    price: 39,
+    currency: "$",
+    sizesAvailable: ["XS", "S", "M", "L", "XL"],
+    comment: "Free shipping on all continental US orders.",
+  },
+
+  {
+    id: 4,
+    image: ProductImageThree,
+    title: "Nike Brown Sneakers",
+    status: "in stock",
+    price: 39,
+    currency: "$",
+    sizesAvailable: ["XS", "S", "M", "L", "XL"],
+    comment: "Free shipping on all continental US orders.",
   },
 ];

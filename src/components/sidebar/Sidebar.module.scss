@@ -7,6 +7,10 @@
     z-index: 2;
     border-right: 1px solid var(--border);
 
+    @media only screen and (max-width: 768px) {
+        display: none;
+    }
+
 
     &__header {
         border-bottom: 1px solid var(--border);

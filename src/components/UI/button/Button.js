@@ -8,6 +8,7 @@ const Button = function (props) {
       type={props.type}
       className={classes}
       role={props.role}
+      data-layout={props.dataset}
       onClick={props.onClick}
     >
       {props.children}

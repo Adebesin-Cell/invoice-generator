@@ -1,14 +1,31 @@
+// import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Card from "../../utils/card/Card";
+// import Button from "../UI/button/Button";
 import overlay from "../../assets/images/overlay.png";
 import styles from "./Dashboard.module.scss";
 import "../../styles/shadows.scss";
 import { ReactComponent as Help } from "../../assets/svgs/icon-help.svg";
 import { ReactComponent as External } from "../../assets/svgs/icon-open-outline.svg";
 import { ReactComponent as View } from "../../assets/svgs/icon-arrow-forward.svg";
-import { Statistics, Sales } from "../../data/Data";
+// import { ReactComponent as Grid } from "../../assets/svgs/icon-grid.svg";
+// import { ReactComponent as List } from "../../assets/svgs/icon-list.svg";
+import { Statistics, Sales, ProductsList } from "../../data/Data";
 
 const DashboardView = function (props) {
+  // const [activeTab, setActiveTab] = useState("grid");
+  // const [productArrangement, setProductArrangement] = useState("grid");
+
+  // const changeProductArrangementHandler = function (e) {
+  //   const { layout } = e.target.dataset;
+
+  //   if (!layout) return;
+
+  //   setActiveTab(layout);
+
+  //   setProductArrangement(layout);
+  // };
+
   return (
     <main className={styles.view}>
       <div className={styles.view__overlay}>
@@ -123,8 +140,74 @@ const DashboardView = function (props) {
           <div className={styles.products}>
             <div className={styles.products__header}>
               <h1 className={styles.products__heading}>Recent Products</h1>
-              <div className={styles.products__arrangement}>&nbsp;</div>
+              {/* <div className={styles.products__arrangement}>
+                <Button
+                  dataset='grid'
+                  className={`${styles.products__button} ${
+                    activeTab === "grid"
+                      ? styles["products__button--active"]
+                      : ""
+                  }`}
+                  onClick={changeProductArrangementHandler}
+                >
+                  <Grid />
+                </Button>
+                <Button
+                  dataset='linear'
+                  className={`${styles.products__button}  ${
+                    activeTab === "linear"
+                      ? styles["products__button--active"]
+                      : ""
+                  }`}
+                  onClick={changeProductArrangementHandler}
+                >
+                  <List />
+                </Button>
+              </div> */}
             </div>
+            <ul
+              className={`${styles.products__list} ${
+                styles[`products__list--grid`]
+              }`}
+            >
+              {ProductsList.map((product) => (
+                <li
+                  key={product.id}
+                  className={`${
+                    styles.products__item
+                  } shadow shadow-xl rounded--md ${
+                    styles[`products__item--grid`]
+                  }`}
+                >
+                  <div className={styles["products__image-box"]}>
+                    <img
+                      src={product.image}
+                      alt={product.title}
+                      className={styles.products__image}
+                    />
+                  </div>
+                  <div className={styles.products__details}>
+                    <div className={styles.products__info}>
+                      <h2 className={styles.products__title}>
+                        {product.title}
+                      </h2>
+                      <h3 className={styles.products__price}>
+                        <span>{product.currency}</span>
+                        <span>{product.price.toFixed(2)}</span>
+                      </h3>
+                    </div>
+                    <p className={styles.products__status}>{product.status}</p>
+                    <ul className={styles.products__sizes}>
+                      {product.sizesAvailable.map((item, i) => (
+                        <li key={i} className={styles.products__size}>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
         <div className={styles.view__help}>
