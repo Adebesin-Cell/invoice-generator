@@ -1,0 +1,11 @@
+.view {
+    width: 100%;
+    background: var(--white);
+    display: none;
+    min-height: 100vh;
+    padding-top: var(--span-2xl);
+
+    @media only screen and (max-width: 990px) {
+        display: block;
+    }
+}

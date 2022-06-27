@@ -6,7 +6,7 @@ import Checkbox from "../UI/checkbox/Checkbox";
 
 const Form = function () {
   return (
-    <form action='' className={styles.form} method='POST'>
+    <form action='' className={styles.form}>
       <h1 className={styles.form__header}>Sign In</h1>
       <div className={styles.form__group}>
         <Input

@@ -90,17 +90,29 @@
         display: flex;
         align-items: center;
         padding: var(--span-2xl);
+
+        @media only screen and (max-width: 600px) {
+            padding: var(--span-s);
+        }
     }
 
     &__form {
         width: 100%;
         padding-left: var(--span-m);
+
+        @media only screen and (max-width: 1140px) {
+            padding-left: 0px;
+        }
     }
 
     &__inner {
         display: flex;
         flex-direction: column;
         padding-right: calc(2.5 * var(--span-2xl));
+
+        @media only screen and (max-width: 1140px) {
+            padding-right: 0px;
+        }
     }
 
     &__header {

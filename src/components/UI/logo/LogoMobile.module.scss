@@ -1,0 +1,22 @@
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__link {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+            font-family: var(--Inter);
+            font-size: calc(var(--size-m) + 2px);
+            font-weight: var(--weight-2xxlg);
+            text-align: left;
+            line-height: 25px;
+            color: var(--dark-blue);
+            font-style: italic;
+        }
+    }
+}

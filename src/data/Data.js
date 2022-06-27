@@ -6,9 +6,9 @@ import ProductImage from "../assets/images/product--0.jpg";
 import ProductImageOne from "../assets/images/product--2.jpg";
 import ProductImageTwo from "../assets/images/product--3.jpg";
 import ProductImageThree from "../assets/images/product--4.jpg";
-import ProductImageFour from "../assets/images/product--5.jpg";
-import ProductImageFive from "../assets/images/product--6.jpg";
-import ProductImageSix from "../assets/images/product--1.jpg";
+// import ProductImageFour from "../assets/images/product--5.jpg";
+// import ProductImageFive from "../assets/images/product--6.jpg";
+// import ProductImageSix from "../assets/images/product--1.jpg";
 
 export const Statistics = [
   {
