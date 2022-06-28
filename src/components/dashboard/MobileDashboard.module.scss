@@ -8,4 +8,56 @@
     @media only screen and (max-width: 990px) {
         display: block;
     }
+
+    &__intro {
+        padding-top: var(--span-s);
+        padding-right: calc(var(--span-s) + 4px);
+        padding-left: calc(var(--span-s) + 4px);
+    }
+
+    &__heading {
+        font-family: var(--Inter);
+        font-size: calc(var(--size-m) + 2px);
+        font-weight: var(--weight-md);
+        text-align: left;
+        line-height: 24px;
+        color: var(--deep_blue);
+    }
+
+    &__paragraph {
+        margin-top: var(--span-xs);
+        font-family: var(--Inter);
+        font-size: calc(var(--size-s) - 1px);
+        font-weight: var(--weight-sm);
+        text-align: left;
+        line-height: 20px;
+        color: rgb(102, 102, 135);
+    }
+
+    &__go {
+        text-decoration: none;
+        width: max-content;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding-top: var(--span-xs);
+        font-family: var(--Inter);
+        font-size: calc(var(--size-xs));
+        font-weight: var(--weight-sm);
+        text-align: left;
+        line-height: 15px;
+        color: var(--bright_blue);
+
+        &--icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--bright_blue);
+        }
+
+        svg {
+            width: 12px;
+            height: 12px;
+        }
+    }
 }

@@ -20,7 +20,7 @@ const DashboardView = function (props) {
               qui numquam, illo ullam porro recusandae deserunt vel.
             </p>
             <a
-              name='See our blog'
+              name='your web store'
               href='/'
               target='_blank'
               rel='noopener noreferrer'
