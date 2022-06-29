@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import Header from "../header/Header";
 import Card from "../../utils/card/Card";
-import { Statistics, ProductsList } from "../../data/Data";
+import { Statistics, ProductsList, Sales } from "../../data/Data";
 import { ReactComponent as External } from "../../assets/svgs/icon-open-outline.svg";
 import "swiper/css";
 import styles from "./MobileDashboard.module.scss";
@@ -99,7 +99,34 @@ const MobileDashboard = function (props) {
         </div>
       </div>
       <div className={styles.view__sales}>
-        <div className={styles.sales}></div>
+        <div className={styles.sales}>
+          <h1 className={styles.sales__heading}>Recent Sales</h1>
+          <div className={styles.sales__wrapper}>
+            {Sales.map((sale, i) => (
+              <Card key={i} className={styles.sales__card}>
+                <div className={styles.sales__box}>
+                  <div className={styles.sales__details}>
+                    <h3 className={styles["sales__order-id"]}>
+                      {sale.orderNumber}
+                    </h3>
+                    <h3 className={styles.sales__buyer}>{sale.buyer}</h3>
+                  </div>
+                  <div className={styles.sales__details}>
+                    <h3 className={styles.sales__title}>{sale.title}</h3>
+                    <h3 className={styles.sales__amount}>
+                      x{sale.totalAmount}
+                    </h3>
+                  </div>
+                  <div className={styles.sales__details}>
+                    <h3 className={styles.sales__price}>
+                      {sale.currency + sale.price}
+                    </h3>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
       </div>
     </main>
   );

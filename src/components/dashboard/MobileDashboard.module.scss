@@ -74,6 +74,10 @@
     &__products {
         @include sectionStyle();
     }
+
+    &__sales {
+        @include sectionStyle();
+    }
 }
 
 .statistics {
@@ -201,7 +205,6 @@
     &__wrapper {
         overflow-x: hidden;
         margin-top: var(--span-m);
-        padding-bottom: var(--span-2xl);
     }
 
     &__swipe {
@@ -276,4 +279,83 @@
         line-height: 13px;
         color: #1E1E1E;
     }
+}
+
+.sales {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: var(--span-2xl);
+
+    &__heading {
+        font-family: var(--Inter);
+        font-size: calc(var(--size-m) + 2px);
+        font-weight: var(--weight-xlg);
+        text-align: left;
+        line-height: 24px;
+        color: var(--deep_blue);
+    }
+
+    &__wrapper {
+        margin-top: var(--span-m);
+        display: grid;
+        gap: var(--span-s);
+
+        @media only screen and (max-width: 990px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media only screen and (max-width: 600px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &__card {
+        box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.005);
+        border-radius: 5px;
+        border: 2px solid #F6F6F6;
+    }
+
+    &__box {
+        padding: var(--span-s);
+    }
+
+    &__details {
+        display: flex;
+        justify-content: space-between;
+
+        &:not(:last-child) {
+            margin-bottom: var(--span-xs);
+        }
+    }
+
+    .details {
+        font-family: var(--Inter);
+        font-style: normal;
+        font-weight: var(--weight-sm);
+        font-size: var(--size-s);
+        line-height: 13px;
+        color: #1E1E1E;
+    }
+
+    &__buyer {
+        @extend .details;
+    }
+
+    &__order-id {
+        @extend .details;
+    }
+
+    &__title {
+        @extend .details;
+    }
+
+    &__amount {
+        @extend .details;
+    }
+
+    &__price {
+        @extend .details;
+        font-weight: var(--weight-md) !important;
+    }
+
 }
