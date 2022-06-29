@@ -6,9 +6,9 @@ import ProductImage from "../assets/images/product--0.jpg";
 import ProductImageOne from "../assets/images/product--2.jpg";
 import ProductImageTwo from "../assets/images/product--3.jpg";
 import ProductImageThree from "../assets/images/product--4.jpg";
-// import ProductImageFour from "../assets/images/product--5.jpg";
-// import ProductImageFive from "../assets/images/product--6.jpg";
-// import ProductImageSix from "../assets/images/product--1.jpg";
+import ProductImageFour from "../assets/images/product--5.jpg";
+import ProductImageFive from "../assets/images/product--6.jpg";
+import ProductImageSix from "../assets/images/product--1.jpg";
 
 export const Statistics = [
   {
@@ -121,6 +121,39 @@ export const ProductsList = [
     id: 4,
     image: ProductImageThree,
     title: "Nike Brown Sneakers",
+    status: "in stock",
+    price: 39,
+    currency: "$",
+    sizesAvailable: ["XS", "S", "M", "L", "XL"],
+    comment: "Free shipping on all continental US orders.",
+  },
+
+  {
+    id: 5,
+    image: ProductImageFour,
+    title: "Nike Brown Sneakers",
+    status: "in stock",
+    price: 39,
+    currency: "$",
+    sizesAvailable: ["XS", "S", "M", "L", "XL"],
+    comment: "Free shipping on all continental US orders.",
+  },
+
+  {
+    id: 6,
+    image: ProductImageFive,
+    title: "Nike Brown Sneakers",
+    status: "in stock",
+    price: 39,
+    currency: "$",
+    sizesAvailable: ["XS", "S", "M", "L", "XL"],
+    comment: "Free shipping on all continental US orders.",
+  },
+
+  {
+    id: 7,
+    image: ProductImageSix,
+    title: "Classic white top",
     status: "in stock",
     price: 39,
     currency: "$",

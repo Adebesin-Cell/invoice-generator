@@ -1,8 +1,8 @@
+import { Swiper, SwiperSlide } from "swiper/react";
 import Header from "../header/Header";
 import Card from "../../utils/card/Card";
-import { ReactComponent as External } from "../../assets/svgs/icon-open-outline.svg";
 import { Statistics, ProductsList } from "../../data/Data";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { ReactComponent as External } from "../../assets/svgs/icon-open-outline.svg";
 import "swiper/css";
 import styles from "./MobileDashboard.module.scss";
 
@@ -79,6 +79,17 @@ const MobileDashboard = function (props) {
                           className={styles.products__image}
                         />
                       </div>
+                      <div className={styles.products__body}>
+                        <h3 className={styles.products__title}>
+                          {product.title}
+                        </h3>
+                        <h1 className={styles.products__price}>
+                          {product.currency + product.price.toFixed(2)}
+                        </h1>
+                        <p className={styles.products__status}>
+                          {product.status}
+                        </p>
+                      </div>
                     </div>
                   </Card>
                 </SwiperSlide>
@@ -86,6 +97,9 @@ const MobileDashboard = function (props) {
             </Swiper>
           </div>
         </div>
+      </div>
+      <div className={styles.view__sales}>
+        <div className={styles.sales}></div>
       </div>
     </main>
   );
