@@ -1,6 +1,10 @@
-import styles from "./MobileDashboard.module.scss";
 import Header from "../header/Header";
+import Card from "../../utils/card/Card";
 import { ReactComponent as External } from "../../assets/svgs/icon-open-outline.svg";
+import { Statistics, ProductsList } from "../../data/Data";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import styles from "./MobileDashboard.module.scss";
 
 const MobileDashboard = function (props) {
   return (
@@ -24,6 +28,64 @@ const MobileDashboard = function (props) {
             <External />
           </span>
         </a>
+      </div>
+      <div className={styles.view__statistics}>
+        <div className={styles.statistics}>
+          <h1 className={styles.statistics__heading}>Statistics</h1>
+          <div className={styles.statistics__wrapper}>
+            {Statistics.map((stat) => (
+              <Card className={styles.statistics__card} key={stat.id}>
+                <div className={styles.statistics__box}>
+                  <div
+                    className={styles.statistics__icon}
+                    style={{
+                      backgroundColor: stat.background,
+                      color: stat.color,
+                    }}
+                  >
+                    {stat.icon}
+                  </div>
+                  <div className={styles.statistics__details}>
+                    <h3 className={styles.statistics__title}>
+                      {stat.amountinwords}
+                    </h3>
+                    <p className={styles.statistics__name}>{stat.title}</p>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className={styles.view__products}>
+        <div className={styles.products}>
+          <h1 className={styles.products__heading}>Recent Products</h1>
+          <div className={styles.products__wrapper}>
+            <Swiper
+              className={styles.products__swipe}
+              spaceBetween={30}
+              slidesPerView={"auto"}
+              onSlideChange={() => console.log("slide change")}
+              onSwiper={(swiper) => console.log(swiper)}
+            >
+              {ProductsList.map((product) => (
+                <SwiperSlide key={product.id}>
+                  <Card className={styles.products__card}>
+                    <div className={styles.products__box}>
+                      <div className={styles["products__image-box"]}>
+                        <img
+                          src={product.image}
+                          alt=''
+                          className={styles.products__image}
+                        />
+                      </div>
+                    </div>
+                  </Card>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </div>
       </div>
     </main>
   );
