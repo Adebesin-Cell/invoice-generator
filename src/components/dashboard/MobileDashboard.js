@@ -3,6 +3,7 @@ import Header from "../header/Header";
 import Card from "../../utils/card/Card";
 import { Statistics, ProductsList, Sales } from "../../data/Data";
 import { ReactComponent as External } from "../../assets/svgs/icon-open-outline.svg";
+import { ReactComponent as Help } from "../../assets/svgs/icon-help.svg";
 import "swiper/css";
 import styles from "./MobileDashboard.module.scss";
 
@@ -127,6 +128,11 @@ const MobileDashboard = function (props) {
             ))}
           </div>
         </div>
+      </div>
+      <div className={styles.view__help}>
+        <span className={styles["view__help--icon"]}>
+          <Help />
+        </span>
       </div>
     </main>
   );
