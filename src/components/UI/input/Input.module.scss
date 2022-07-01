@@ -9,12 +9,12 @@
     border: none;
     outline: none;
     appearance: none;
-    appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
     color: var(--input);
 
-    &::-webkit-input-placeholder {
+    &::-webkit-input-placeholder,
+    &:-ms-input-placeholder {
         font-family: var(--Inter);
         font-size: var(--size-m);
         font-weight: var(--weight-sm);

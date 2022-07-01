@@ -7,3 +7,4 @@ export { default as Order } from "./Order";
 export { default as Product } from "./Products";
 export { default as Invoice } from "./Invoice";
 export { default as NotFound } from "./404";
+export { default as NewInvoice } from "./AddInvoice";

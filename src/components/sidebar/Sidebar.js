@@ -12,8 +12,6 @@ const Sidebar = function (props) {
   const [isClosed, setIsClosed] = useState(true);
   const ctx = useContext(NavigationContext);
 
-  console.log(ctx);
-
   const toggleFooterMenuHandler = function (e) {
     setIsClosed(!isClosed);
   };
@@ -28,7 +26,7 @@ const Sidebar = function (props) {
   return (
     <div className={styles.sidebar}>
       <div className={styles.sidebar__header}>
-        <a href='/dashboard' className={styles.sidebar__link}>
+        <NavLink to={ctx.pathname} className={styles.sidebar__link}>
           <span className={styles.sidebar__logo}>
             <LogoSidebar />
           </span>
@@ -38,7 +36,7 @@ const Sidebar = function (props) {
             </span>
             <span className={styles["sidebar__title--bottom"]}>workplace</span>
           </span>
-        </a>
+        </NavLink>
       </div>
       <nav className={styles.sidebar__nav}>
         <li className={styles.sidebar__item}>

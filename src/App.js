@@ -10,7 +10,7 @@ import {
   Contact,
   NotFound,
   Register,
-  // AddInvoice,
+  NewInvoice,
 } from "./pages";
 
 function App() {
@@ -26,9 +26,13 @@ function App() {
         <Route path='/' element={<Login />}></Route>
         <Route path='/register' element={<Register />}></Route>
         <Route path='/dashboard' element={<Dashboard />}></Route>
-        <Route path='/invoice' element={<Invoice />}>
-          {/* <Route path="add" element={<AddInvoice/>}></Route> */}
-        </Route>
+        <Route path='/invoice' element={<Invoice />}></Route>
+        <Route path='/invoice/add' element={<NewInvoice />}></Route>
+        <Route path='/invoice/edit/:invoiceid' element={<NewInvoice />}></Route>
+        <Route
+          path='/invoice/delete/:invoiceid'
+          element={<NewInvoice />}
+        ></Route>
         <Route path='/report' element={<Report />}></Route>
         <Route path='/products' element={<Product />}></Route>
         <Route path='/order' element={<Order />}></Route>

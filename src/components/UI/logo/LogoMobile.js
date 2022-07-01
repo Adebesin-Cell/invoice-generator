@@ -1,11 +1,12 @@
 import styles from "./LogoMobile.module.scss";
+import { Link } from "react-router-dom";
 
 const LogoMobile = function () {
   return (
     <div className={styles.logo}>
-      <a href='/dashboard' className={styles.logo__link}>
+      <Link to='/dashboard' className={styles.logo__link}>
         <span>Bizz</span>
-      </a>
+      </Link>
     </div>
   );
 };

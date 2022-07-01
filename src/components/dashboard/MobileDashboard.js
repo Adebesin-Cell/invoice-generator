@@ -66,8 +66,6 @@ const MobileDashboard = function (props) {
               className={styles.products__swipe}
               spaceBetween={30}
               slidesPerView={"auto"}
-              onSlideChange={() => console.log("slide change")}
-              onSwiper={(swiper) => console.log(swiper)}
             >
               {ProductsList.map((product) => (
                 <SwiperSlide key={product.id}>
