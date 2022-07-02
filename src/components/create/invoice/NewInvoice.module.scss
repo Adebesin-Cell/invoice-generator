@@ -9,8 +9,8 @@
         min-height: 100vh;
 
         @media only screen and (min-width: 1800px) {
-            padding-left: 5%;
-            padding-right: 5%;
+            padding-left: 15%;
+            padding-right: 15%;
         }
     }
 
@@ -44,6 +44,10 @@
     }
 }
 
+.form {
+    flex-grow: 1;
+}
+
 .invoice {
     margin-top: var(--span-m);
     padding-bottom: var(--span-2xl);
@@ -71,7 +75,8 @@
     &__body {
         padding-top: var(--span-m);
         display: grid;
-        grid-template-columns: 66.6667% 33.3333%;
+        grid-template-columns: 2fr 1fr;
+        gap: var(--span-l);
     }
 
     &__form {
@@ -80,10 +85,34 @@
         gap: calc(var(--span-s));
     }
 
+    &__label {
+        position: absolute;
+        top: calc(var(--span-xs) - 4px);
+        left: calc(var(--span-xs) + 5px);
+        font-family: var(--Inter);
+        font-size: calc(var(--size-xs) - 1px);
+        font-weight: var(--weight-sm);
+        text-align: left;
+        line-height: 15px;
+        color: var(--deep_blue);
+    }
+
     &__group {
+        position: relative;
+
+        input {
+            padding-top: calc(var(--span-s));
+        }
+
         &--sm {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
+            gap: var(--span-l);
+        }
+
+        &--xsm {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: var(--span-l);
         }
 
@@ -96,7 +125,7 @@
 
     &__input {
         padding: calc(var(--span-xs) + 2px) calc(var(--span-xs) + 5px);
-        height: 50px;
+        height: 55px;
         box-shadow: 0 0 0 1px #6b7177;
         border: 1px solid transparent;
         border-radius: 4px;
@@ -105,9 +134,13 @@
         font-size: var(--size-s) !important;
         font-weight: var(--weight-sm);
         text-align: left;
-        line-height: 19px;
+        line-height: 16px;
         color: var(--deep_blue);
         transition: all 300ms;
+
+        &--lg {
+            grid-column: span 2;
+        }
 
         &:focus {
             box-shadow: 0 0 0 1px var(--bright_blue);
@@ -119,9 +152,9 @@
     &:-ms-input-placeholder {
         font-family: var(--Inter);
         font-size: var(--size-s) !important;
-        font-weight: var(--weight-sm);
+        font-weight: var(--weight-sm) !important;
         text-align: left;
-        line-height: 19px;
+        line-height: 16px;
         color: var(--deep_blue);
     }
 }

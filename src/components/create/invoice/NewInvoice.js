@@ -118,7 +118,7 @@ const NewInvoice = function () {
             </div>
             <div className={styles.invoice__body}>
               <div className={styles.invoice__form}>
-                <div className={styles["invoice__group--sm"]}>
+                <div className={styles["invoice__group--xsm"]}>
                   <Input
                     type='text'
                     className={styles.invoice__input}
@@ -135,26 +135,44 @@ const NewInvoice = function () {
                     aria-label={`Your Customer's email`}
                     role='Invoice input'
                   />
+                  <div className={styles.invoice__group}>
+                    <span className={styles.invoice__label}>
+                      Invoice number
+                    </span>
+                    <Input
+                      type='text'
+                      className={styles.invoice__input}
+                      placeholder='1'
+                      name='Invoice number'
+                      aria-label='Invoice number'
+                      role='Invoice input'
+                    />
+                  </div>
                 </div>
-                <div className={styles["invoice__group--sm"]}>
+                <div className={styles["invoice__group--xsm"]}>
                   <Input
                     type='text'
-                    className={styles.invoice__input}
-                    placeholder='Invoice Number'
-                    name='Invoice Number'
-                    aria-label='Invoice Number'
+                    className={`${styles.invoice__input} ${styles["invoice__input--lg"]}`}
+                    placeholder={`Customer's address`}
+                    name={`Customer's address`}
+                    aria-label={`Customer's address`}
                     role='Invoice input'
                   />
-                  <Input
-                    type='date'
-                    className={styles.invoice__input}
-                    placeholder='Invoice date'
-                    name='Invoice date'
-                    aria-label='Invoice date'
-                    role='Invoice input'
-                  />
+                  <div className={styles.invoice__group}>
+                    <span className={styles.invoice__label}>Invoice date</span>
+                    <Input
+                      type='date'
+                      className={styles.invoice__input}
+                      placeholder='2022-07-01'
+                      name='Invoice date'
+                      value='2022-07-01'
+                      aria-label='Invoice date'
+                      role='Invoice input'
+                      onChange={() => console.log("changed")}
+                    />
+                  </div>
                 </div>
-                <div className={styles["invoice__group--sm"]}>
+                <div className={styles["invoice__group--xsm"]}>
                   <Input
                     type='text'
                     className={styles.invoice__input}
@@ -174,6 +192,33 @@ const NewInvoice = function () {
                 </div>
               </div>
               <div className={styles.invoice__upload}>&nbsp;</div>
+            </div>
+            <div
+              className={`${styles.invoice__header} ${styles.invoice__space}`}
+            >
+              <h1 className={styles.invoice__heading}>
+                Enter the items you wish to bill
+              </h1>
+              <div className={styles.progress}>
+                <p className={styles.progress__paragraph}>Step 3 of 3</p>
+                <ul className={styles.progress__dots}>
+                  <li
+                    className={`${styles.progress__dot} ${styles["progress__dot--active"]}`}
+                  >
+                    &nbsp;
+                  </li>
+                  <li
+                    className={`${styles.progress__dot} ${styles["progress__dot--active"]}`}
+                  >
+                    &nbsp;
+                  </li>
+                  <li
+                    className={`${styles.progress__dot} ${styles["progress__dot--active"]}`}
+                  >
+                    &nbsp;
+                  </li>
+                </ul>
+              </div>
             </div>
           </section>
         </main>

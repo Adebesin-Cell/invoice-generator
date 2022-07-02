@@ -9,7 +9,7 @@ const InvoiceEmpty = function (props) {
       </div>
       <h1 className={styles.empty__heading}>Oh! It’s still empty</h1>
       <p className={styles.empty__paragraph}>
-        You haven’t create any invoice yet!
+        You haven’t created any invoice yet!
       </p>
     </div>
   );
