@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 import InvoiceEmpty from "./empty/InvoiceEmpty";
 import InvoiceList from "./invoiceList/InvoiceList";
 import styles from "./Invoice.module.scss";

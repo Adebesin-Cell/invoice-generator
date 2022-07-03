@@ -1,8 +1,38 @@
+import { useState } from "react";
+import uuid from "react-uuid";
 import styles from "./NewInvoice.module.scss";
 import Header from "../header/Header";
 import Input from "../../UI/input/Input";
+import NewEntry from "./NewInvoiceEntry";
+import { ReactComponent as Add } from "../../../assets/svgs/icon-add.svg";
+import Button from "../../UI/button/Button";
 
 const NewInvoice = function () {
+  const [items, setItems] = useState([
+    {
+      id: uuid(),
+      title: "",
+      description: "",
+      quantity: "",
+      price: "",
+      amount: "",
+    },
+  ]);
+
+  const addNewItemHandler = function () {
+    setItems((prevItems) => [
+      ...prevItems,
+      {
+        id: uuid(),
+        title: "",
+        description: "",
+        quantity: "",
+        price: "",
+        amount: "",
+      },
+    ]);
+  };
+
   return (
     <form action='' className={styles.form}>
       <div className={styles.view}>
@@ -191,7 +221,6 @@ const NewInvoice = function () {
                   />
                 </div>
               </div>
-              <div className={styles.invoice__upload}>&nbsp;</div>
             </div>
             <div
               className={`${styles.invoice__header} ${styles.invoice__space}`}
@@ -218,6 +247,23 @@ const NewInvoice = function () {
                     &nbsp;
                   </li>
                 </ul>
+              </div>
+            </div>
+            <div className={styles.invoice__bill}>
+              {items.map((item) => (
+                <NewEntry key={item.id} {...item}></NewEntry>
+              ))}
+              <div className={styles.add}>
+                <Button
+                  className={styles.add__btn}
+                  type='button'
+                  onClick={addNewItemHandler}
+                >
+                  <span className={styles.add__icon}>
+                    <Add />
+                  </span>
+                  <p className={styles.add__text}>Add a line item</p>
+                </Button>
               </div>
             </div>
           </section>

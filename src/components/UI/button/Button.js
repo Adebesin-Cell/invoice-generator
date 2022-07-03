@@ -4,13 +4,7 @@ const Button = function (props) {
   const classes = `${props.className} ${styles.button}`;
 
   return (
-    <button
-      type={props.type}
-      className={classes}
-      role={props.role}
-      data-layout={props.dataset}
-      onClick={props.onClick}
-    >
+    <button {...props} className={classes} data-layout={props.dataset}>
       {props.children}
     </button>
   );

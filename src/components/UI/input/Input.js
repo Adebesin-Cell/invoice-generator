@@ -5,6 +5,7 @@ const Input = function (props) {
 
   return (
     <input
+      {...props}
       aria-label={props.label}
       role={props.role}
       name={props.name}
@@ -13,6 +14,8 @@ const Input = function (props) {
       value={props.value}
       className={classes}
       onChange={props.onChange}
+      step={props.step || ""}
+      min={props.min || ""}
     />
   );
 };
