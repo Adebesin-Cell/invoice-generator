@@ -4,6 +4,11 @@
     column-gap: var(--span-m);
     row-gap: var(--span-s);
 
+    @media only screen and (max-width: 600px) {
+        column-gap: var(--span-s);
+        row-gap: var(--span-xs);
+    }
+
     &:first-child {
         padding-top: var(--span-m);
     }

@@ -12,6 +12,16 @@
             padding-left: 15%;
             padding-right: 15%;
         }
+
+        @media only screen and (max-width: 1140px) {
+            padding-left: var(--span-2xl);
+            padding-right: var(--span-2xl);
+        }
+
+        @media only screen and (max-width: 600px) {
+            padding-left: var(--span-s);
+            padding-right: var(--span-s);
+        }
     }
 
     &__section {
@@ -60,6 +70,10 @@
         justify-content: space-between;
         padding-bottom: var(--span-s);
         border-bottom: 1px solid #EEE;
+
+        @media only screen and (max-width: 600px) {
+            flex-direction: column;
+        }
     }
 
     &__heading {
@@ -119,6 +133,19 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: var(--span-l);
+
+            @media only screen and (max-width: 1140px) {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            @media only screen and (max-width: 768px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media only screen and (max-width: 600px) {
+                grid-template-columns: repeat(1, 1fr);
+                gap: var(--span-s);
+            }
         }
 
         &--lg {
@@ -171,9 +198,20 @@
     &__footer {
         padding-top: var(--span-m);
         border-top: 1px solid #EEE;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        display: flex;
         gap: var(--span-l);
+
+        @media only screen and (max-width: 600px) {
+            flex-direction: column;
+        }
+    }
+
+    &__box {
+        flex: 1 0 40%;
+
+        @media only screen and (max-width: 600px) {
+            flex: 1 0 100%;
+        }
     }
 
     &__label--footer {
@@ -260,6 +298,11 @@
     display: flex;
     gap: var(--span-s);
     align-self: center;
+
+    @media only screen and (max-width: 600px) {
+        align-self: flex-start;
+        margin-top: var(--span-xs);
+    }
 
     &__paragraph {
         font-family: var(--Inter);

@@ -117,8 +117,6 @@ const NewInvoice = function () {
                     aria-label={`Customer's address`}
                     role='Invoice input'
                   />
-                </div>
-                <div className={styles["invoice__group--xsm"]}>
                   <Input
                     type='text'
                     className={styles.invoice__input}
@@ -198,7 +196,6 @@ const NewInvoice = function () {
                   Submit
                 </Button>
               </div>
-              <div className={styles.invoice__box}>&nbsp;</div>
             </div>
           </section>
         </main>
