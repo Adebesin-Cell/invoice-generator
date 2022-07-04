@@ -49,11 +49,10 @@
 }
 
 .invoice {
-    margin-top: var(--span-m);
     padding-bottom: var(--span-2xl);
 
     &__space {
-        padding-top: var(--span-l);
+        padding-top: var(--span-m);
     }
 
     &__header {
@@ -75,8 +74,9 @@
     &__body {
         padding-top: var(--span-m);
         display: grid;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1fr;
         gap: var(--span-l);
+        row-gap: var(--span-s);
 
 
         @media only screen and (max-width: 1140px) {
@@ -117,7 +117,7 @@
 
         &--xsm {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: var(--span-l);
         }
 
@@ -167,10 +167,55 @@
         display: grid;
         gap: var(--span-m);
     }
+
+    &__footer {
+        padding-top: var(--span-m);
+        border-top: 1px solid #EEE;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--span-l);
+    }
+
+    &__label--footer {
+        font-family: var(--Inter);
+        font-size: var(--size-s);
+        font-weight: var(--weight-sm);
+        text-align: left;
+        line-height: 16px;
+        color: var(--deep_blue);
+        display: block;
+        margin-bottom: var(--span-xs);
+    }
+
+    &__textarea {
+        display: block;
+        height: 100px;
+        width: 100%;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__btn {
+        margin-top: auto;
+        background: var(--bright_blue);
+        font-family: var(--Inter);
+        font-size: var(--size-s);
+        font-weight: var(--weight-sm);
+        text-align: left;
+        line-height: 16px;
+        color: var(--white);
+        padding: calc(var(--span-xs) + 8px) var(--span-2xl);
+        border-radius: 10px;
+        width: max-content;
+    }
 }
 
 .add {
     padding-top: var(--span-m);
+    padding-bottom: var(--span-m);
 
     &__btn {
         display: flex;
