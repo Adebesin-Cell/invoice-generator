@@ -170,6 +170,8 @@
 }
 
 .add {
+    padding-top: var(--span-m);
+
     &__btn {
         display: flex;
         align-items: center;

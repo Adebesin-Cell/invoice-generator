@@ -33,6 +33,15 @@ const NewInvoice = function () {
     ]);
   };
 
+  const deleteItemHandler = function (invoiceId) {
+    setItems((prevInvoices) => {
+      const updatedInvoices = prevInvoices.filter(
+        (invoice) => invoice.id !== invoiceId
+      );
+      return updatedInvoices;
+    });
+  };
+
   return (
     <form action='' className={styles.form}>
       <div className={styles.view}>
@@ -251,20 +260,24 @@ const NewInvoice = function () {
             </div>
             <div className={styles.invoice__bill}>
               {items.map((item) => (
-                <NewEntry key={item.id} {...item}></NewEntry>
+                <NewEntry
+                  key={item.id}
+                  {...item}
+                  onDelete={deleteItemHandler}
+                ></NewEntry>
               ))}
-              <div className={styles.add}>
-                <Button
-                  className={styles.add__btn}
-                  type='button'
-                  onClick={addNewItemHandler}
-                >
-                  <span className={styles.add__icon}>
-                    <Add />
-                  </span>
-                  <p className={styles.add__text}>Add a line item</p>
-                </Button>
-              </div>
+            </div>
+            <div className={styles.add}>
+              <Button
+                className={styles.add__btn}
+                type='button'
+                onClick={addNewItemHandler}
+              >
+                <span className={styles.add__icon}>
+                  <Add />
+                </span>
+                <p className={styles.add__text}>Add a line item</p>
+              </Button>
             </div>
           </section>
         </main>

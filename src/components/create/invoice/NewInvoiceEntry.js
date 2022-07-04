@@ -1,6 +1,8 @@
 import { useState } from "react";
+import Button from "../../UI/button/Button";
 import Input from "../../UI/input/Input";
 import styles from "./NewInvoiceEntry.module.scss";
+import { ReactComponent as Close } from "../../../assets/svgs/icon-close-sharp.svg";
 
 const NewEntry = function ({
   id,
@@ -9,6 +11,7 @@ const NewEntry = function ({
   description,
   amount,
   price,
+  onDelete,
 }) {
   const [currentPrice, setCurrentPrice] = useState(0);
   const [currentAmount, setCurrentAmount] = useState(0);
@@ -19,6 +22,10 @@ const NewEntry = function ({
 
   const amountChangeHandler = function (e) {
     setCurrentAmount(+e.target.value);
+  };
+
+  const deleteItemHandler = function () {
+    onDelete(id);
   };
 
   return (
@@ -75,10 +82,22 @@ const NewEntry = function ({
           onChange={priceChangeHandler}
         />
       </div>
-      <div className={`${styles.entry__group} ${styles["entry__group--sm"]}`}>
+      <div className={`${styles.entry__group} ${styles["entry__group--xsm"]}`}>
         <div className={styles.entry__amount}>
           <h1>Amount</h1>
           <p>{`₦${(currentAmount * currentPrice).toFixed(2)}`}</p>
+        </div>
+      </div>
+      <div className={`${styles.entry__group} ${styles["entry__group--xsm"]}`}>
+        <div className={styles.entry__delete}>
+          <Button
+            type='button'
+            role='Delete'
+            className={styles.entry__btn}
+            onClick={deleteItemHandler}
+          >
+            <Close />
+          </Button>
         </div>
       </div>
     </div>
