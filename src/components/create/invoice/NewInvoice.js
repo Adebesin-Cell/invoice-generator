@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import uuid from "react-uuid";
 import styles from "./NewInvoice.module.scss";
 import Header from "../header/Header";
@@ -18,6 +19,8 @@ const NewInvoice = function () {
       amount: "",
     },
   ]);
+
+  const navigate = useNavigate();
 
   const addNewItemHandler = function () {
     setItems((prevItems) => [
@@ -44,6 +47,7 @@ const NewInvoice = function () {
 
   const formSubmitHandler = function (e) {
     e.preventDefault();
+    navigate("/invoice/preview", { replace: true });
   };
 
   return (

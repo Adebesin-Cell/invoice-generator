@@ -33,7 +33,7 @@ function App() {
           path='/invoice/delete/:invoiceid'
           element={<NewInvoice />}
         ></Route>
-        <Route path='/invoice/preview' element={<NewInvoice />}></Route>
+        <Route path='/invoice/preview' element={<Order />}></Route>
         <Route path='/report' element={<Report />}></Route>
         <Route path='/products' element={<Product />}></Route>
         <Route path='/order' element={<Order />}></Route>
