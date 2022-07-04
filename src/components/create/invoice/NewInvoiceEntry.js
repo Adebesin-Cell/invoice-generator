@@ -4,15 +4,7 @@ import Input from "../../UI/input/Input";
 import styles from "./NewInvoiceEntry.module.scss";
 import { ReactComponent as Close } from "../../../assets/svgs/icon-close-sharp.svg";
 
-const NewEntry = function ({
-  id,
-  title,
-  quantity,
-  description,
-  amount,
-  price,
-  onDelete,
-}) {
+const NewEntry = function ({ id, onDelete, ...props }) {
   const [currentPrice, setCurrentPrice] = useState(0);
   const [currentAmount, setCurrentAmount] = useState(0);
 
@@ -29,7 +21,7 @@ const NewEntry = function ({
   };
 
   return (
-    <div className={styles.entry}>
+    <div className={styles.entry} id={id}>
       <div className={`${styles.entry__group} ${styles["entry__group--sm"]}`}>
         <Input
           placeholder='Item'
