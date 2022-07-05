@@ -42,6 +42,10 @@
         align-items: center;
         height: 100%;
 
+        @media only screen and (max-width: 600px) {
+            display: none;
+        }
+
         a {
             text-decoration: none;
             font-family: var(--Inter);
@@ -63,6 +67,10 @@
         text-align: left;
         line-height: 21px;
         color: #999;
+
+        @media only screen and (max-width: 600px) {
+            display: none;
+        }
     }
 
     &__directory {
@@ -91,10 +99,10 @@
         align-self: center;
         text-decoration: none;
         font-family: var(--Inter);
-        font-size: var(--size-s);
+        font-size: var(--size-xs);
         font-weight: var(--weight-sm);
         text-align: left;
-        line-height: 21px;
+        line-height: 15px;
         color: var(--dark-blue);
         padding-right: var(--span-s);
     }
