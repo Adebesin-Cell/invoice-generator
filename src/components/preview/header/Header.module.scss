@@ -91,4 +91,27 @@
         list-style-type: none;
         height: 100%;
     }
+
+    &__item {
+        border-left: 1px solid #EEE;
+        transition: all 300ms;
+
+        &:hover {
+            background: #EEE;
+        }
+    }
+
+    &__btn {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #111;
+
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+    }
 }

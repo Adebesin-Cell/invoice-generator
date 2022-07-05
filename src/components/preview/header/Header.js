@@ -1,5 +1,9 @@
 import styles from "./Header.module.scss";
 import { Link, useLocation } from "react-router-dom";
+import Button from "../../UI/button/Button";
+import { ReactComponent as Share } from "../../../assets/svgs/icon-share-2.svg";
+import { ReactComponent as Edit } from "../../../assets/svgs/icon-edit-3.svg";
+import { ReactComponent as Download } from "../../../assets/svgs/icon-download.svg";
 
 const Header = function (props) {
   const { pathname } = useLocation();
@@ -22,7 +26,21 @@ const Header = function (props) {
       </div>
       <div className={styles.header__actions}>
         <ul className={styles.header__list}>
-          <li className={styles.header__item}>&nbsp;</li>
+          <li className={styles.header__item}>
+            <Button className={styles.header__btn} role='button'>
+              <Edit />
+            </Button>
+          </li>
+          <li className={styles.header__item}>
+            <Button className={styles.header__btn} role='button'>
+              <Download />
+            </Button>
+          </li>
+          <li className={styles.header__item}>
+            <Button className={styles.header__btn} role='button'>
+              <Share />
+            </Button>
+          </li>
         </ul>
       </div>
     </header>
