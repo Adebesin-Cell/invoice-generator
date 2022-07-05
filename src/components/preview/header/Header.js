@@ -13,7 +13,7 @@ const Header = function (props) {
       </div>
       <div className={styles.header__site}>
         <div className={styles.header__branch}>
-          <Link to={pathname}>Create</Link>
+          <Link to={pathname}>Preview</Link>
         </div>
         <span className={styles.header__divider}>/</span>
         <div className={styles.header__directory}>
@@ -21,8 +21,9 @@ const Header = function (props) {
         </div>
       </div>
       <div className={styles.header__actions}>
-        {/* Invoice ID goes here */}
-        <p className={styles.header__paragraph}>WP-12346-csc</p>
+        <ul className={styles.header__list}>
+          <li className={styles.header__item}>&nbsp;</li>
+        </ul>
       </div>
     </header>
   );

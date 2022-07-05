@@ -47,7 +47,7 @@ const NewInvoice = function () {
 
   const formSubmitHandler = function (e) {
     e.preventDefault();
-    navigate("/invoice/preview", { replace: true });
+    navigate("/preview/invoice", { replace: true });
   };
 
   return (
