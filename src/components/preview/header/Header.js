@@ -26,17 +26,17 @@ const Header = function (props) {
       </div>
       <div className={styles.header__actions}>
         <ul className={styles.header__list}>
-          <li className={styles.header__item}>
+          <li className={styles.header__item} title='edit'>
             <Button className={styles.header__btn} role='button'>
               <Edit />
             </Button>
           </li>
-          <li className={styles.header__item}>
+          <li className={styles.header__item} title='download'>
             <Button className={styles.header__btn} role='button'>
               <Download />
             </Button>
           </li>
-          <li className={styles.header__item}>
+          <li className={styles.header__item} title='share'>
             <Button className={styles.header__btn} role='button'>
               <Share />
             </Button>
