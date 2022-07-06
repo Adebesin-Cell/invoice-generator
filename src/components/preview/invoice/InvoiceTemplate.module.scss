@@ -161,6 +161,51 @@
     &__due {
         align-self: flex-end;
     }
+
+    &__footer {
+        padding-top: var(--span-m);
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        gap: var(--span-l);
+
+        h3 {
+            color: #151515 !important;
+        }
+    }
+
+    &__text {
+        margin-top: 5px;
+        font-family: var(--Inter);
+        font-style: normal;
+        font-weight: var(--weight-sm);
+        font-size: calc(var(--size-xs) - 1px);
+        line-height: 15px;
+        color: var(--deep_blue);
+    }
+
+    &__total {
+        display: flex;
+        justify-content: space-between;
+
+        h2 {
+            font-family: var(--Inter);
+            font-style: normal;
+            font-weight: var(--weight-sm);
+            font-size: calc(var(--size-xs));
+            line-height: 15px;
+            color: var(--deep_blue);
+        }
+    }
+
+    &__amount {
+        font-family: var(--Inter);
+        font-style: normal;
+        font-weight: var(--weight-lg);
+        font-size: calc(var(--size-xs));
+        line-height: 15px;
+        color: var(--deep_blue);
+        text-align: right;
+    }
 }
 
 .table {

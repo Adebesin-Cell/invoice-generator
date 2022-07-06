@@ -143,101 +143,23 @@ const InvoiceContent = React.forwardRef(function (props, ref) {
                 ₦15,000.00
               </td>
             </tr>
-            <tr
-              className={`${styles.table__row} ${styles["table__row--body"]}`}
-            >
-              <div className={styles.table__box}>
-                <td
-                  className={`${styles.table__definition} ${styles["table__definition--lg"]}`}
-                >
-                  Gold chain
-                </td>
-                <td
-                  className={`${styles.table__definition} ${styles["table__definition--lg"]} ${styles["table__description"]}`}
-                >
-                  Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.
-                </td>
-              </div>
-              <td
-                className={`${styles.table__definition} ${styles["table__definition--sm"]}`}
-              >
-                01
-              </td>
-              <td
-                className={`${styles.table__definition} ${styles["table__definition--sm"]}`}
-              >
-                15,000
-              </td>
-              <td
-                className={`${styles.table__definition} ${styles["table__definition--sm"]}`}
-              >
-                ₦15,000.00
-              </td>
-            </tr>
-            <tr
-              className={`${styles.table__row} ${styles["table__row--body"]}`}
-            >
-              <div className={styles.table__box}>
-                <td
-                  className={`${styles.table__definition} ${styles["table__definition--lg"]}`}
-                >
-                  Gold chain
-                </td>
-                <td
-                  className={`${styles.table__definition} ${styles["table__definition--lg"]} ${styles["table__description"]}`}
-                >
-                  Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.
-                </td>
-              </div>
-              <td
-                className={`${styles.table__definition} ${styles["table__definition--sm"]}`}
-              >
-                01
-              </td>
-              <td
-                className={`${styles.table__definition} ${styles["table__definition--sm"]}`}
-              >
-                15,000
-              </td>
-              <td
-                className={`${styles.table__definition} ${styles["table__definition--sm"]}`}
-              >
-                ₦15,000.00
-              </td>
-            </tr>
-            <tr
-              className={`${styles.table__row} ${styles["table__row--body"]}`}
-            >
-              <div className={styles.table__box}>
-                <td
-                  className={`${styles.table__definition} ${styles["table__definition--lg"]}`}
-                >
-                  Gold chain
-                </td>
-                <td
-                  className={`${styles.table__definition} ${styles["table__definition--lg"]} ${styles["table__description"]}`}
-                >
-                  Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.
-                </td>
-              </div>
-              <td
-                className={`${styles.table__definition} ${styles["table__definition--sm"]}`}
-              >
-                01
-              </td>
-              <td
-                className={`${styles.table__definition} ${styles["table__definition--sm"]}`}
-              >
-                15,000
-              </td>
-              <td
-                className={`${styles.table__definition} ${styles["table__definition--sm"]}`}
-              >
-                ₦15,000.00
-              </td>
-            </tr>
           </tbody>
         </table>
+        <div className={styles.invoice__footer}>
+          <div className={styles.invoice__note}>
+            <h3 className={styles.invoice__title}>Notes</h3>
+            <p className={styles.invoice__text}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+              aliquam pulvinar dolor urna enim vitae vel. Ultrices eget ut.
+            </p>
+          </div>
+          <div className={styles.invoice__summary}>
+            <div className={styles.invoice__total}>
+              <h2>Total</h2>
+              <p className={styles.invoice__amount}>₦15,000.00</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
