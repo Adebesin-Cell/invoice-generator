@@ -31,7 +31,11 @@ const Header = function (props) {
               <Edit />
             </Button>
           </li>
-          <li className={styles.header__item} title='download'>
+          <li
+            className={styles.header__item}
+            title='download'
+            onClick={props.handlePrint}
+          >
             <Button className={styles.header__btn} role='button'>
               <Download />
             </Button>
