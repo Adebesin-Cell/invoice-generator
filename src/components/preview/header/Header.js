@@ -10,7 +10,7 @@ const Header = function (props) {
 
   return (
     <header className={styles.header}>
-      <div className={styles.header__logo}>
+      <div className={styles.header__logo} onClick={props.mobilePrint}>
         <Link to={pathname} className={styles["header__logo--link"]}>
           Bizz
         </Link>

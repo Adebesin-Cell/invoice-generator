@@ -3,6 +3,12 @@
     padding-left: calc(var(--span-2xl) + var(--span-s));
     padding-right: calc(var(--span-2xl) + var(--span-s));
     padding-bottom: calc(var(--span-2xl));
+
+    @media only screen and (max-width: 600px) {
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+    }
 }
 
 .invoice {
@@ -11,6 +17,10 @@
     margin-top: var(--span-2xl);
     background: var(--white);
     border: 1px solid #eee;
+
+    @media (max-width: 600px) {
+        display: none;
+    }
 
     &__header {
         padding: var(--span-m);

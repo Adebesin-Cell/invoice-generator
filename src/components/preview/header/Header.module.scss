@@ -34,6 +34,10 @@
         padding-left: var(--span-s);
         display: flex;
         margin-right: auto;
+
+        @media only screen and (max-width: 600px) {
+            display: none;
+        }
     }
 
     &__branch {
@@ -41,6 +45,10 @@
         justify-content: center;
         align-items: center;
         height: 100%;
+
+        @media only screen and (max-width: 600px) {
+            display: none;
+        }
 
         a {
             text-decoration: none;
@@ -63,6 +71,10 @@
         text-align: left;
         line-height: 21px;
         color: #999;
+
+        @media only screen and (max-width: 600px) {
+            display: none;
+        }
     }
 
     &__directory {
@@ -70,6 +82,10 @@
         justify-content: center;
         align-items: center;
         height: 100%;
+
+        @media only screen and (max-width: 600px) {
+            display: none;
+        }
 
         a {
             text-decoration: none;
@@ -84,6 +100,10 @@
 
     &__actions {
         height: 100%;
+
+        @media only screen and (max-width: 600px) {
+            display: none;
+        }
     }
 
     &__list {

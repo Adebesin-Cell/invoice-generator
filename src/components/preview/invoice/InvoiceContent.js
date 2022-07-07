@@ -1,6 +1,6 @@
+import React from "react";
 import styles from "./InvoiceTemplate.module.scss";
 import BusinessLogo from "../../../assets/images/company-logo.png";
-import React from "react";
 
 const InvoiceContent = React.forwardRef(function (props, ref) {
   return (
