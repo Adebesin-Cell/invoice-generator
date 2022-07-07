@@ -8,6 +8,7 @@ import { ReactComponent as Add } from "../../assets/svgs/icon-add.svg";
 const InvoiceView = function (props) {
   const [isEmpty, setIsEmpty] = useState(true);
 
+  // eslint-disable-next-line no-unused-vars
   const addInvoiceHandler = function (invoice) {
     setIsEmpty(false);
   };
