@@ -1,4 +1,4 @@
-import styles from "./NewProduct.module.scss";
+import styles from "./NewProduct.style.module.scss";
 import Header from "../header/Header";
 import Input from "../../UI/input/Input";
 import { useState } from "react";
