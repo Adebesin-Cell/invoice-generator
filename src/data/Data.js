@@ -9,6 +9,7 @@ import ProductImageThree from "../assets/images/product--4.jpg";
 import ProductImageFour from "../assets/images/product--5.jpg";
 import ProductImageFive from "../assets/images/product--6.jpg";
 import ProductImageSix from "../assets/images/product--1.jpg";
+import ProductImageSeven from "../assets/images/product--7.png";
 
 export const Statistics = [
   {
@@ -159,5 +160,31 @@ export const ProductsList = [
     currency: "$",
     sizesAvailable: ["XS", "S", "M", "L", "XL"],
     comment: "Free shipping on all continental US orders.",
+  },
+];
+
+export const DUMMY_PRODUCTS = [
+  {
+    id: 1,
+    title: "Ankara Materials",
+    category: "Clothing",
+    Description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit in ex optio placeat quia quidem aliquid, vero exercitationem id commodi molestiae illo tempore quod. Sapiente eum eveniet quisquam suscipit ratione. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores qui aut voluptatum consectetur praesentium, commodi voluptatibus laudantium hic, alias aliquam dicta possimus iure minima magnam? Quibusdam minus repudiandae voluptatum sit rem neque possimus modi velit, explicabo consequatur natus vero, corrupti ex commodi eveniet aliquid? Ab libero animi aliquid beatae, autem, suscipit rem porro rerum tempore ea consequatur deleniti, dolor accusamus.",
+    price: 5000,
+    quantity: 50,
+    image: ProductImageSeven,
+    discount: 0,
+  },
+
+  {
+    id: 2,
+    title: "Ankara Materials",
+    category: "Clothing",
+    Description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit in ex optio placeat quia quidem aliquid, vero exercitationem id commodi molestiae illo tempore quod. Sapiente eum eveniet quisquam suscipit ratione. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores qui aut voluptatum consectetur praesentium, commodi voluptatibus laudantium hic, alias aliquam dicta possimus iure minima magnam? Quibusdam minus repudiandae voluptatum sit rem neque possimus modi velit, explicabo consequatur natus vero, corrupti ex commodi eveniet aliquid? Ab libero animi aliquid beatae, autem, suscipit rem porro rerum tempore ea consequatur deleniti, dolor accusamus.",
+    price: 5000,
+    quantity: 50,
+    image: ProductImageTwo,
+    discount: 0,
   },
 ];

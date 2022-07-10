@@ -2,8 +2,12 @@ import styles from "./Product.module.scss";
 import { Link } from "react-router-dom";
 import { ReactComponent as Add } from "../../assets/svgs/icon-add.svg";
 import ProductsEmpty from "./empty/ProductsEmpty";
+import ProductList from "./productList/ProductList";
+import { DUMMY_PRODUCTS } from "../../data/Data";
 
 const ProductView = function (props) {
+  const isProductsAvailable = true;
+
   return (
     <div className={styles.view}>
       <div className={styles.view__intro}>
@@ -13,7 +17,11 @@ const ProductView = function (props) {
         </p>
       </div>
       <div className={styles.view__container}>
-        <ProductsEmpty />
+        {isProductsAvailable ? (
+          <ProductList data={DUMMY_PRODUCTS} />
+        ) : (
+          <ProductsEmpty />
+        )}
       </div>
       <div className={styles.view__add}>
         <Link to='add' className={styles["view__add--link"]}>
