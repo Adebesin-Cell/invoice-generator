@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import "../../../styles/shadows.scss";
 
 const ProductList = function (props) {
-  console.log(props.data);
   return (
     <div className={styles.product}>
       <ul className={styles.product__list}>
@@ -19,7 +18,13 @@ const ProductList = function (props) {
                     className={styles.product__image}
                   />
                 </div>
-                <div className={styles.product__body}>&nbsp;</div>
+                <div className={styles.product__body}>
+                  <h1 className={styles.product__title}>{item.title}</h1>
+                  <h3 className={styles.product__price}>
+                    {item.currency}
+                    {item.price}
+                  </h3>
+                </div>
               </Card>
             </Link>
           </li>

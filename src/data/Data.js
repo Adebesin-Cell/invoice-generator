@@ -174,11 +174,12 @@ export const DUMMY_PRODUCTS = [
     quantity: 50,
     image: ProductImageSeven,
     discount: 0,
+    currency: "₦",
   },
 
   {
     id: 2,
-    title: "Ankara Materials",
+    title: "Classic White Hoodie",
     category: "Clothing",
     Description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit in ex optio placeat quia quidem aliquid, vero exercitationem id commodi molestiae illo tempore quod. Sapiente eum eveniet quisquam suscipit ratione. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores qui aut voluptatum consectetur praesentium, commodi voluptatibus laudantium hic, alias aliquam dicta possimus iure minima magnam? Quibusdam minus repudiandae voluptatum sit rem neque possimus modi velit, explicabo consequatur natus vero, corrupti ex commodi eveniet aliquid? Ab libero animi aliquid beatae, autem, suscipit rem porro rerum tempore ea consequatur deleniti, dolor accusamus.",
@@ -186,5 +187,6 @@ export const DUMMY_PRODUCTS = [
     quantity: 50,
     image: ProductImageTwo,
     discount: 0,
+    currency: "₦",
   },
 ];

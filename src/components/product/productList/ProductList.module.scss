@@ -23,6 +23,10 @@
         flex-direction: column;
     }
 
+    &__link {
+        text-decoration: none;
+    }
+
     &__card {
         background: none;
         border-radius: 12px;
@@ -38,10 +42,44 @@
     }
 
     &__body {
-        padding: var(--span-xs) var(--span-m);
+        padding: calc(var(--span-s) + 4px);
         padding-bottom: var(--span-m);
         background: var(--white);
         border-bottom-left-radius: 12px;
         border-bottom-right-radius: 12px;
+    }
+
+    &__title {
+        font-family: var(--Inter);
+        font-size: calc(var(--size-m));
+        font-weight: var(--weight-lg);
+        text-align: left;
+        line-height: 21px;
+        color: rgb(15, 23, 42);
+    }
+
+    &__price {
+        margin-top: 5px;
+        font-family: var(--Inter);
+        font-size: calc(var(--size-xs));
+        font-weight: var(--weight-lg);
+        text-align: left;
+        line-height: 15px;
+        color: #6e748b;
+    }
+
+
+    &__status {
+        &::first-letter {
+            text-transform: uppercase;
+        }
+
+        margin-top: var(--span-xs);
+        font-family: var(--Inter);
+        font-size: calc(var(--size-s));
+        font-weight: var(--weight-md);
+        text-align: left;
+        line-height: 18px;
+        color: rgb(15, 23, 42);
     }
 }
