@@ -17,12 +17,12 @@ const Header = function (props) {
         </div>
         <span className={styles.header__divider}>/</span>
         <div className={styles.header__directory}>
-          <Link to={pathname}>Invoice</Link>
+          <Link to={pathname}>{props.directory}</Link>
         </div>
       </div>
       <div className={styles.header__actions}>
-        {/* Invoice ID goes here */}
-        <p className={styles.header__paragraph}>WP-12346-csc</p>
+        {/* ID goes here */}
+        <p className={styles.header__paragraph}>{props.id}</p>
       </div>
     </header>
   );

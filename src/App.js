@@ -12,6 +12,7 @@ import {
   Register,
   NewInvoice,
   Preview,
+  NewProduct,
 } from "./pages";
 import InvoiceTemplate from "./components/preview/invoice/InvoiceTemplate";
 
@@ -31,16 +32,13 @@ function App() {
         <Route path='/invoice' element={<Invoice />}></Route>
         <Route path='/invoice/add' element={<NewInvoice />}></Route>
         <Route path='/invoice/edit/:invoiceid' element={<NewInvoice />}></Route>
-        <Route
-          path='/invoice/delete/:invoiceid'
-          element={<NewInvoice />}
-        ></Route>
         <Route path='/invoice/preview' element={<Order />}></Route>
         <Route path='/preview' element={<Preview />}>
           <Route path='invoice' element={<InvoiceTemplate />}></Route>
         </Route>
         <Route path='/report' element={<Report />}></Route>
         <Route path='/products' element={<Product />}></Route>
+        <Route path='/products/add' element={<NewProduct />}></Route>
         <Route path='/order' element={<Order />}></Route>
         <Route path='/contact' element={<Contact />}></Route>
         <Route path='*' element={<NotFound />}></Route>
