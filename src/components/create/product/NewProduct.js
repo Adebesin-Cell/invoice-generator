@@ -11,6 +11,7 @@ const NewProduct = function (props) {
   const fileUploadHandler = function (event) {
     setSelectedFile(event.target.files[0]);
     console.log(selectedFile);
+    //hello
   };
 
   return (
