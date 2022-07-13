@@ -38,7 +38,12 @@ function App() {
         </Route>
         <Route path='/report' element={<Report />}></Route>
         <Route path='/products' element={<Product />}></Route>
+        <Route path='/products/:productid' element={<Product />}></Route>
         <Route path='/products/add' element={<NewProduct />}></Route>
+        <Route
+          path='/products/edit/:productid'
+          element={<NewProduct />}
+        ></Route>
         <Route path='/order' element={<Order />}></Route>
         <Route path='/contact' element={<Contact />}></Route>
         <Route path='*' element={<NotFound />}></Route>
