@@ -2,7 +2,8 @@
     padding-top: var(--span-2xl);
     padding-left: calc(var(--span-2xl) + var(--span-s));
     padding-right: calc(var(--span-2xl) + var(--span-s));
-    min-height: 100vh;
+    overflow: hidden;
+    max-height: 100vh;
 
     @media only screen and (min-width: 1800px) {
         padding-left: 15%;
@@ -21,7 +22,7 @@
     &__wrapper {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        min-height: calc(100vh - var(--span-2xl));
+        height: calc(100vh - var(--span-2xl));
     }
 
     &__content {
@@ -38,11 +39,12 @@
         width: 300px;
         height: 350px;
         object-fit: cover;
+        border-radius: 5px;
     }
 
     &__main {
         display: flex;
-        gap: var(--span-m);
+        gap: var(--span-xl);
         padding-right: var(--span-m);
     }
 
@@ -76,7 +78,7 @@
     }
 
     &__extra {
-        margin-top: var(--span-s);
+        margin-top: var(--span-l);
         padding-right: var(--span-m);
     }
 
@@ -85,8 +87,17 @@
         font-size: calc(var(--size-s) - 1px);
         font-weight: var(--weight-sm);
         text-align: left;
-        line-height: 19px;
+        line-height: 21px;
         color: var(--dark-blue);
+    }
+
+    &__form {
+        overflow-y: scroll;
+        height: calc(100vh - var(--span-2xl));
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
     }
 }
 
