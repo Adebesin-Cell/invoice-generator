@@ -87,7 +87,7 @@
         font-size: calc(var(--size-s) - 1px);
         font-weight: var(--weight-sm);
         text-align: left;
-        line-height: 21px;
+        line-height: 23px;
         color: var(--dark-blue);
     }
 
@@ -112,6 +112,13 @@
         width: 100%;
         display: flex;
         flex-direction: column;
+
+        &--grid {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            gap: var(--span-m);
+        }
 
         &--lg {
             grid-column: span 2;
@@ -224,6 +231,23 @@
             text-align: left;
             line-height: 15px;
             color: var(--deep_blue);
+        }
+    }
+
+    &__button {
+        padding: var(--span-xs) calc(var(--span-2xl) + var(--span-s));
+        text-align: center;
+        height: 50px;
+        border-radius: 4px;
+
+        &--red {
+            color: var(--white);
+            background: var(--red);
+        }
+
+        &--green {
+            color: var(--white);
+            background: var(--success);
         }
     }
 }

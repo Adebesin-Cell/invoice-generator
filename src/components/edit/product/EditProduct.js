@@ -4,7 +4,7 @@ import image from "../../../assets/images/product--1.jpg";
 import Input from "../../UI/input/Input";
 import { useState } from "react";
 import { ReactComponent as Camera } from "../../../assets/svgs/icon-camera.svg";
-// import Button from "../../UI/button/Button";
+import Button from "../../UI/button/Button";
 
 const EditProductComponent = function () {
   const [selectedFile, setSelectedFile] = useState();
@@ -166,6 +166,20 @@ const EditProductComponent = function () {
                 className={styles.form__textarea}
                 placeholder='Product Description'
               ></textarea>
+            </div>
+            <div
+              className={`${styles.form__group} ${styles["form__group--lg"]} ${styles["form__group--grid"]}`}
+            >
+              <Button
+                className={`${styles.form__button} ${styles["form__button--red"]}`}
+              >
+                Delete
+              </Button>
+              <Button
+                className={`${styles.form__button} ${styles["form__button--green"]}`}
+              >
+                Save
+              </Button>
             </div>
           </form>
         </div>
