@@ -63,7 +63,7 @@ const NewProduct = function (props) {
                 <Input
                   id='product-price'
                   name='product-price'
-                  type='text'
+                  type='number'
                   className={styles.form__input}
                   placeholder='Product price'
                 />
@@ -107,7 +107,7 @@ const NewProduct = function (props) {
                 <Input
                   id='discount'
                   name='product-discount'
-                  type='text'
+                  type='number'
                   className={styles.form__input}
                   placeholder='Discount'
                 />

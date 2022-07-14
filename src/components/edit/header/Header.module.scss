@@ -1,0 +1,109 @@
+.header {
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    height: 60px;
+    display: flex;
+    background: var(--white);
+    border-bottom: 1px solid #EEE;
+    z-index: 9;
+
+    &__logo {
+        height: 100%;
+        border-right: 1px solid #EEE;
+
+        &--link {
+            display: flex;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            padding-left: var(--span-s);
+            padding-right: var(--span-s);
+            font-family: var(--Inter);
+            font-size: calc(var(--size-m) + 2px);
+            font-weight: var(--weight-xxlg);
+            text-align: left;
+            line-height: 25px;
+            color: var(--dark-blue);
+        }
+    }
+
+    &__site {
+        padding-left: var(--span-s);
+        display: flex;
+        margin-right: auto;
+    }
+
+    &__branch {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        @media only screen and (max-width: 600px) {
+            display: none;
+        }
+
+        a {
+            text-decoration: none;
+            font-family: var(--Inter);
+            font-size: var(--size-s);
+            font-weight: var(--weight-sm);
+            text-align: left;
+            line-height: 21px;
+            color: #999;
+        }
+    }
+
+    &__divider {
+        padding-left: 5px;
+        padding-right: 5px;
+        align-self: center;
+        font-family: var(--Inter);
+        font-size: var(--size-s);
+        font-weight: var(--weight-sm);
+        text-align: left;
+        line-height: 21px;
+        color: #999;
+
+        @media only screen and (max-width: 600px) {
+            display: none;
+        }
+    }
+
+    &__directory {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        a {
+            text-decoration: none;
+            font-family: var(--Inter);
+            font-size: var(--size-s);
+            font-weight: var(--weight-sm);
+            text-align: left;
+            line-height: 21px;
+            color: var(--dark-blue);
+        }
+    }
+
+    &__actions {
+        height: 100%;
+        display: flex;
+    }
+
+    &__paragraph {
+        align-self: center;
+        text-decoration: none;
+        font-family: var(--Inter);
+        font-size: var(--size-xs);
+        font-weight: var(--weight-sm);
+        text-align: left;
+        line-height: 15px;
+        color: var(--dark-blue);
+        padding-right: var(--span-s);
+    }
+}

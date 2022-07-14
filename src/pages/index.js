@@ -10,3 +10,4 @@ export { default as NotFound } from "./404";
 export { default as NewInvoice } from "./AddInvoice";
 export { default as Preview } from "./Preview";
 export { default as NewProduct } from "./AddProducts";
+export { default as EditProduct } from "./EditProduct";

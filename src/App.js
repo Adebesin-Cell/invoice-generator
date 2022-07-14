@@ -13,6 +13,7 @@ import {
   NewInvoice,
   Preview,
   NewProduct,
+  EditProduct,
 } from "./pages";
 import InvoiceTemplate from "./components/preview/invoice/InvoiceTemplate";
 
@@ -42,7 +43,7 @@ function App() {
         <Route path='/products/add' element={<NewProduct />}></Route>
         <Route
           path='/products/edit/:productid'
-          element={<NewProduct />}
+          element={<EditProduct />}
         ></Route>
         <Route path='/order' element={<Order />}></Route>
         <Route path='/contact' element={<Contact />}></Route>
