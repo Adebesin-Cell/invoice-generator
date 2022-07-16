@@ -14,6 +14,7 @@ import {
   Preview,
   NewProduct,
   EditProduct,
+  ViewProduct,
 } from "./pages";
 import InvoiceTemplate from "./components/preview/invoice/InvoiceTemplate";
 
@@ -39,7 +40,7 @@ function App() {
         </Route>
         <Route path='/report' element={<Report />}></Route>
         <Route path='/products' element={<Product />}></Route>
-        <Route path='/products/:productid' element={<Product />}></Route>
+        <Route path='/products/:productid' element={<ViewProduct />}></Route>
         <Route path='/products/add' element={<NewProduct />}></Route>
         <Route
           path='/products/edit/:productid'

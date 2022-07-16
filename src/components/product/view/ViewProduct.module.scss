@@ -1,0 +1,28 @@
+.view {
+    display: flex;
+    flex-direction: column;
+
+    &__wrapper {
+        padding-top: calc(var(--span-2xl) + var(--span-m));
+        padding-left: calc(var(--span-2xl) + var(--span-s));
+        padding-right: calc(var(--span-2xl) + var(--span-s));
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+
+        @media only screen and (min-width: 1800px) {
+            padding-left: 15%;
+            padding-right: 15%;
+        }
+
+        @media only screen and (max-width: 1140px) {
+            padding-left: var(--span-2xl);
+            padding-right: var(--span-2xl);
+        }
+
+        @media only screen and (max-width: 600px) {
+            padding-left: var(--span-s);
+            padding-right: var(--span-s);
+        }
+    }
+}

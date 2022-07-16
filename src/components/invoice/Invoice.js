@@ -4,6 +4,7 @@ import InvoiceEmpty from "./empty/InvoiceEmpty";
 import InvoiceList from "./invoiceList/InvoiceList";
 import styles from "./Invoice.module.scss";
 import { ReactComponent as Add } from "../../assets/svgs/icon-add.svg";
+import Header from "../header/Header";
 
 const InvoiceView = function (props) {
   const [isEmpty, setIsEmpty] = useState(true);
@@ -23,6 +24,23 @@ const InvoiceView = function (props) {
               You can add or view your invoices here.
             </p>
           </div>
+        </div>
+        <div className={styles.invoice__container}>
+          {isEmpty ? <InvoiceEmpty /> : <InvoiceList />}
+        </div>
+        <div className={styles.invoice__add}>
+          <Link to='add' className={styles["invoice__add--link"]}>
+            <Add />
+          </Link>
+        </div>
+      </div>
+      <div className={styles.invoice__mobile}>
+        <Header />
+        <div className={styles.invoice__mobileIntro}>
+          <h1 className={styles.invoice__mobileHeading}>Hi Lope👋</h1>
+          <p className={styles.invoice__mobileParagraph}>
+            You can add or view your invoices here.
+          </p>
         </div>
         <div className={styles.invoice__container}>
           {isEmpty ? <InvoiceEmpty /> : <InvoiceList />}
