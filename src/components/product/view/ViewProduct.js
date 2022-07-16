@@ -15,6 +15,11 @@ const ViewProduct = function () {
             <div className={styles["view__image--box"]}>
               <img src={image} alt='product' className={styles.view__image} />
             </div>
+            <div className={styles.view__info}>
+              <h1 className={styles.view__title}>Classic white dress</h1>
+              <p className={styles.view__price}>₦50,000.00</p>
+              <ul className={styles.view__categories}>&nbsp;</ul>
+            </div>
           </div>
         </div>
       </div>
