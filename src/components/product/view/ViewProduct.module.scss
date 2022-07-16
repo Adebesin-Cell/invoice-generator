@@ -31,6 +31,7 @@
         border: 1px solid #eee;
         border-radius: 5px;
         padding: var(--span-s);
+        padding-bottom: var(--span-xl);
     }
 
     &__header {
@@ -44,6 +45,7 @@
         border-radius: 10px;
         border: 1px solid #eee;
         overflow: hidden;
+        flex-shrink: 0;
     }
 
     &__image {
@@ -74,6 +76,76 @@
         font-weight: var(--weight-lg);
         text-align: left;
         line-height: 15px;
+        color: var(--text-blue--1);
+    }
+
+    &__categories {
+        margin-top: var(--span-s);
+        display: flex;
+        gap: calc(var(--span-xs) + 5px);
+        flex-wrap: wrap;
+        list-style-type: none;
+    }
+
+    &__category {
+        padding: 5px var(--span-xs);
+        font-family: var(--Inter);
+        font-size: calc(var(--size-xs));
+        font-weight: var(--weight-sm);
+        text-align: left;
+        line-height: 15px;
         color: var(--bright_blue);
+        border: 1px solid var(--bright_blue);
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    &__quantity {
+        margin-top: var(--span-s);
+    }
+
+    &__max {
+        font-family: var(--Inter);
+        font-size: calc(var(--size-xs) + 1px);
+        font-weight: var(--weight-lg);
+        text-align: left;
+        line-height: 15px;
+        color: var(--text-blue--1);
+    }
+
+    &__body {
+        margin-top: var(--span-m);
+    }
+
+    &__bodyText {
+        font-family: var(--Inter);
+        font-size: calc(var(--size-s));
+        font-weight: var(--weight-sm);
+        text-align: left;
+        line-height: 23px;
+        color: var(--text-blue--1);
+    }
+
+    &__action {
+        display: flex;
+        margin-top: var(--span-m);
+        justify-content: space-between;
+    }
+
+    &__btn {
+        text-decoration: none;
+        padding: calc(var(--span-xs) + 3px) calc(var(--span-2xl) + var(--span-s));
+        font-family: var(--Inter);
+        font-size: calc(var(--size-s));
+        font-weight: var(--weight-sm);
+        text-align: left;
+        line-height: 23px;
+        color: var(--white);
+        background: var(--success);
+        border-radius: 5px;
+
+        &--red {
+            background: var(--red);
+        }
     }
 }
