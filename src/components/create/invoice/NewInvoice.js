@@ -53,7 +53,7 @@ const NewInvoice = function () {
   return (
     <form action='' className={styles.form} onSubmit={formSubmitHandler}>
       <div className={styles.view}>
-        <Header id={"WP-12346-csc"} directory='invoice' />
+        <Header id={"WP-12346-csc"} site='Create' directory='invoice' />
         <main className={styles.view__intro}>
           <div className={styles.view__section}>
             <h1 className={styles.view__heading}>Invoice Generator</h1>

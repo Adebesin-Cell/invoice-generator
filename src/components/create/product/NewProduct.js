@@ -15,7 +15,7 @@ const NewProduct = function (props) {
 
   return (
     <div className={styles.product}>
-      <Header id='WP-12346-csc' directory='product' />
+      <Header id='WP-12346-csc' site='Create' directory='product' />
       <main className={styles.product__intro}>
         <div className={styles.product__section}>
           <h1 className={styles.product__heading}>Add Product</h1>

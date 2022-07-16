@@ -13,7 +13,7 @@ const Header = function (props) {
       </div>
       <div className={styles.header__site}>
         <div className={styles.header__branch}>
-          <Link to={pathname}>Create</Link>
+          <Link to={pathname}>{props.site}</Link>
         </div>
         <span className={styles.header__divider}>/</span>
         <div className={styles.header__directory}>
