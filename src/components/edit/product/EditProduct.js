@@ -171,6 +171,8 @@ const EditProductComponent = function () {
               className={`${styles.form__group} ${styles["form__group--lg"]} ${styles["form__group--grid"]}`}
             >
               <Button
+                type='button'
+                name='delete'
                 className={`${styles.form__button} ${styles["form__button--red"]}`}
               >
                 Delete

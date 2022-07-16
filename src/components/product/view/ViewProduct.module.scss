@@ -119,11 +119,11 @@
 
     &__bodyText {
         font-family: var(--Inter);
-        font-size: calc(var(--size-s));
+        font-size: calc(var(--size-s) - 1px);
         font-weight: var(--weight-sm);
         text-align: left;
         line-height: 23px;
-        color: var(--text-blue--1);
+        color: var(--dark-blue);
     }
 
     &__action {

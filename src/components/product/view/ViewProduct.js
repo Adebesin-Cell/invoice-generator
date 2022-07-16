@@ -3,6 +3,7 @@ import Header from "../../create/header/Header";
 import { Link } from "react-router-dom";
 import styles from "./ViewProduct.module.scss";
 import image from "../../../assets/images/product--1.jpg";
+import Button from "../../UI/button/Button";
 
 const ViewProduct = function () {
   const { productid } = useParams();
@@ -43,12 +44,13 @@ const ViewProduct = function () {
             <Link to='/products/edit/1' className={styles.view__btn}>
               Edit
             </Link>
-            <Link
-              to='/products/delete'
+            <Button
+              name='delete'
+              type='button'
               className={`${styles.view__btn} ${styles["view__btn--red"]}`}
             >
               Delete
-            </Link>
+            </Button>
           </div>
         </div>
       </div>
