@@ -34,6 +34,20 @@ const ProductView = function (props) {
       {/* Mobile and Tablet view */}
       <div className={styles.mobile}>
         <Header />
+        <div className={styles.product__mobileIntro}>
+          <h1 className={styles.product__mobileHeading}>Hi Lope👋</h1>
+          <p className={styles.product__mobileParagraph}>
+            You can add or view your products here.
+          </p>
+        </div>
+        <div className={styles.product__container}>
+          <ProductsEmpty />
+        </div>
+        <div className={styles.product__add}>
+          <Link to='add' className={styles["product__add--link"]}>
+            <Add />
+          </Link>
+        </div>
       </div>
     </>
   );
