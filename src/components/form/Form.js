@@ -1,12 +1,19 @@
 import styles from "./Form.module.scss";
 import Input from "../UI/input/Input";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Button from "../UI/button/Button";
 import Checkbox from "../UI/checkbox/Checkbox";
 
 const Form = function () {
+  const navigate = useNavigate();
+
+  const formSubmitHandler = function (e) {
+    e.preventDefault();
+    navigate("/dashboard", { replace: true });
+  };
+
   return (
-    <form action='' className={styles.form}>
+    <form action='' onSubmit={formSubmitHandler} className={styles.form}>
       <h1 className={styles.form__header}>Sign In</h1>
       <div className={styles.form__group}>
         <Input

@@ -38,10 +38,7 @@ const NewInvoice = function () {
 
   const deleteItemHandler = function (invoiceId) {
     setItems((prevInvoices) => {
-      const updatedInvoices = prevInvoices.filter(
-        (invoice) => invoice.id !== invoiceId
-      );
-      return updatedInvoices;
+      return prevInvoices.filter((invoice) => invoice.id !== invoiceId);
     });
   };
 
