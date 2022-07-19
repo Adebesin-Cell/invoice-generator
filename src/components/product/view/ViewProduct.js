@@ -1,6 +1,5 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import Header from "../../create/header/Header";
-import { Link } from "react-router-dom";
 import styles from "./ViewProduct.module.scss";
 import image from "../../../assets/images/product--1.jpg";
 import Button from "../../UI/button/Button";
@@ -41,7 +40,10 @@ const ViewProduct = function () {
             </p>
           </div>
           <div className={styles.view__action}>
-            <Link to='/products/edit/1' className={styles.view__btn}>
+            <Link
+              to={`/products/edit/${productid}`}
+              className={styles.view__btn}
+            >
               Edit
             </Link>
             <Button
