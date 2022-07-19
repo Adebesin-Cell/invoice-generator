@@ -10,24 +10,47 @@
         padding-right: 15%;
     }
 
-    @media only screen and (max-width: 1140px) {
+    @media only screen and (max-width: 1200px) {
         padding-left: var(--span-2xl);
         padding-right: var(--span-2xl);
     }
 
+    @media only screen and (max-width: 768px) {
+        max-height: initial;
+        overflow: visible;
+    }
+
     @media only screen and (max-width: 600px) {
         padding-left: var(--span-s);
+        padding-right: var(--span-s);
+        padding-top: var(--span-s);
     }
 
     &__wrapper {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         height: calc(100vh - var(--span-2xl));
+
+        @media only screen and (max-width: 768px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
 
     &__content {
         border-right: 1px solid #eee;
         padding-top: var(--span-2xl);
+        overflow-y: scroll;
+        height: calc(100vh - var(--span-2xl));
+
+        @media only screen and (max-width: 768px) {
+            border-right: none;
+            height: initial;
+            overflow-y: initial;
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
     }
 
     &__image-box {
@@ -40,16 +63,34 @@
         height: 350px;
         object-fit: cover;
         border-radius: 5px;
+
+        @media only screen and (max-width: 1140px) {
+            width: 100%;
+        }
     }
 
     &__main {
         display: flex;
         gap: var(--span-xl);
         padding-right: var(--span-m);
+
+        @media only screen and (max-width: 1140px) {
+            gap: var(--span-m);
+            flex-direction: column;
+        }
+
+        @media only screen and (max-width: 768px) {
+            padding-right: 0px;
+        }
     }
 
     &__info {
         flex-grow: 1;
+
+        @media only screen and (max-width: 1140px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
     &__label {
@@ -80,6 +121,14 @@
     &__extra {
         margin-top: var(--span-l);
         padding-right: var(--span-m);
+
+        @media only screen and (max-width: 1140px) {
+            margin-top: var(--span-m);
+        }
+
+        @media only screen and (max-width: 768px) {
+            padding-right: 0px;
+        }
     }
 
     &__description {
@@ -89,11 +138,17 @@
         text-align: left;
         line-height: 23px;
         color: var(--dark-blue);
+        padding-bottom: var(--span-m);
     }
 
     &__form {
         overflow-y: scroll;
         height: calc(100vh - var(--span-2xl));
+
+        @media only screen and (max-width: 768px) {
+            height: initial;
+            overflow-y: initial;
+        }
 
         &::-webkit-scrollbar {
             display: none;
@@ -108,6 +163,21 @@
     grid-template-columns: repeat(2, 1fr);
     gap: var(--span-m);
 
+    @media only screen and (max-width: 1200px) {
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: 1fr;
+    }
+
+    @media only screen and (max-width: 1140px) {
+        padding-left: var(--span-m);
+    }
+
+    @media only screen and (max-width: 768px) {
+        padding-top: var(--span-xs);
+        padding-left: 0px;
+    }
+
     &__group {
         width: 100%;
         display: flex;
@@ -118,6 +188,11 @@
             justify-content: space-between;
             flex-direction: row;
             gap: var(--span-m);
+
+            @media only screen and (max-width: 600px) {
+                flex-direction: column;
+                gap: var(--span-xs);
+            }
         }
 
         &--lg {
@@ -246,6 +321,7 @@
         }
 
         &--green {
+            order: -1;
             color: var(--white);
             background: var(--success);
         }
