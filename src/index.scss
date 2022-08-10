@@ -1,5 +1,60 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+@font-face {
+    font-family: 'Quicksand Book Oblique Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Quicksand Book Oblique Regular'), url('./assets/fonts/Quicksand_Book_Oblique.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Quicksand Book Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Quicksand Book Regular'), url('./assets/fonts/Quicksand_Book.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Quicksand Dash Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Quicksand Dash Regular'), url('./assets/fonts/Quicksand_Dash.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Quicksand Light Oblique Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Quicksand Light Oblique Regular'), url('./assets/fonts/Quicksand_Light_Oblique.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Quicksand Light Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Quicksand Light Regular'), url('./assets/fonts/Quicksand_Light.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Quicksand Bold Oblique Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Quicksand Bold Oblique Regular'), url('./assets/fonts/Quicksand_Bold_Oblique.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Quicksand Bold Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Quicksand Bold Regular'), url('./assets/fonts/Quicksand_Bold.woff') format('woff');
+}
+
 
 *,
 *::before,
@@ -82,4 +137,5 @@ body {
     font-family: var(--Inter);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background: var(--white);
 }

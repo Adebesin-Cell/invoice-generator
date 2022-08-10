@@ -1,0 +1,28 @@
+.view {
+    display: flex;
+    gap: calc(var(--span-xs) + 2px);
+    cursor: pointer;
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-family: "Quicksand Bold Regular";
+        font-size: var(--size-m);
+        line-height: 23px;
+        letter-spacing: 0.05em;
+        text-align: left;
+        color: #1e1e1e;
+    }
+
+    &__paragraph {
+        font-family: "Quicksand Light Regular";
+        font-size: var(--size-xs);
+        line-height: 15px;
+        letter-spacing: 0.05em;
+        text-align: left;
+        color: #1e1e1e;
+    }
+}

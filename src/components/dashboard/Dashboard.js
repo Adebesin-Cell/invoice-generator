@@ -1,159 +1,169 @@
-import Card from "../../utils/card/Card";
-import styles from "./Dashboard.module.scss";
-import "../../styles/shadows.scss";
-import { ReactComponent as Help } from "../../assets/svgs/icon-help.svg";
-import { ReactComponent as External } from "../../assets/svgs/icon-open-outline.svg";
-import { Statistics, Sales, ProductsList } from "../../data/Data";
-import MobileDashboard from "./MobileDashboard";
+import Topbar from '../topbar/Topbar';
+import styles from './Dashboard.module.scss';
+import Card from '../../utils/card/Card';
+import { Link } from 'react-router-dom';
+import { RecentProducts, RecentSales } from '../../data/Data';
+import * as Icon from 'react-feather';
+import { FormatDate } from '../../utils/formatDate/FormatDate';
+import { FormatNumber } from '../../utils/formatNumber/FormatNumber';
 
-const DashboardView = function (props) {
+const DashboardView = function () {
   return (
     <>
-      {/* desktop view */}
-      <main className={styles.view}>
+      <div className={styles.view}>
+        <Topbar title='Dashboard' />
+        <div className={styles.view__intro}>
+          <Card className={`${styles.card} ${styles['card--blue']}`}>
+            <div className={styles.card__body}>
+              <div className={styles.card__left}>
+                <h3 className={styles.card__title}>Total Sales</h3>
+                <h1 className={styles.card__heading}>N10,039,000</h1>
+                <p className={styles.card__paragraph}>
+                  20% sales increase this month
+                </p>
+              </div>
+              <div className={styles.card__right}>
+                <div className={styles.card__box}>
+                  <div className={styles.card__info}>
+                    <h3 className={styles.card__title__small}>Week Sales</h3>
+                    <h1 className={styles.card__heading__small}>300,600</h1>
+                  </div>
+                  <div className={styles.card__info}>
+                    <h3 className={styles.card__title__small}>Monthly Sales</h3>
+                    <h1 className={styles.card__heading__small}>800,600</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Card>
+          <Card className={`${styles.card} ${styles['card--blue']}`}>
+            <div className={styles.card__body}>
+              <div className={styles.card__left}>
+                <h3 className={styles.card__title}>Products</h3>
+                <h1 className={styles.card__heading}>15,070</h1>
+              </div>
+              <div className={styles.card__right}>
+                <div className={styles.card__box}>
+                  <div className={styles.card__info}>
+                    <h3 className={styles.card__title__small}>
+                      Available Products
+                    </h3>
+                    <h1 className={styles.card__heading__small}>1,500</h1>
+                  </div>
+                  <div className={styles.card__info}>
+                    <h3 className={styles.card__title__small}>
+                      Out of stock Products
+                    </h3>
+                    <h1 className={styles.card__heading__small}>499</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Card>
+        </div>
         <div className={styles.view__container}>
-          <div className={styles.view__intro}>
-            <h1 className={styles.view__heading}>Hi Lope👋</h1>
-            <p className={styles.view__paragraph}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-              temporibus laboriosam quas nisi dolorem ducimus, dolores pariatur
-              qui numquam, illo ullam porro recusandae deserunt vel.
-            </p>
-            <a
-              name='your web store'
-              href='/'
-              target='_blank'
-              rel='noopener noreferrer'
-              className={styles.view__go}
-            >
-              <span className='text'>View your web store</span>
-              <span className={styles["view__go--icon"]}>
-                <External />
-              </span>
-            </a>
-          </div>
-          <div className={styles.statistics}>
-            <h1 className={styles.statistics__heading}>Statistics</h1>
-            <div className={styles.statistics__wrapper}>
-              {Statistics.map((stat) => (
-                <Card className={styles.statistics__card} key={stat.id}>
-                  <div className={styles.statistics__box}>
-                    <div
-                      className={styles.statistics__icon}
-                      style={{
-                        backgroundColor: stat.background,
-                        color: stat.color,
-                      }}
-                    >
-                      {stat.icon}
-                    </div>
-                    <div className={styles.statistics__details}>
-                      <h3 className={styles.statistics__title}>
-                        {stat.amountinwords}
-                      </h3>
-                      <p className={styles.statistics__name}>{stat.title}</p>
+          <div className={styles.products}>
+            <div className={styles.products__header}>
+              <h1 className={styles.products__heading}>Recent Products</h1>
+              <Link
+                to='/products'
+                name='View all Products'
+                className={styles.products__link}
+              >
+                View More
+              </Link>
+            </div>
+            <div className={styles.products__list}>
+              {RecentProducts.map((product) => (
+                <div className={styles.products__item} key={product.id}>
+                  <span className={styles.products__tag}>
+                    {product.quantity}
+                  </span>
+                  <div className={styles.products__overlay}>
+                    <div className={styles.product__details}>
+                      <h1 className={styles.products__title}>
+                        {product.title}
+                      </h1>
+                      <h1 className={styles.products__price}>
+                        <FormatNumber
+                          type='currency'
+                          amount={product.price}
+                          currency={product.currency}
+                          locale='en-US'
+                        />
+                      </h1>
                     </div>
                   </div>
-                </Card>
+                  <div className={styles['products__image-box']}>
+                    <img
+                      src={product.image}
+                      alt={product.title}
+                      className={styles.products__image}
+                    />
+                  </div>
+                </div>
               ))}
             </div>
           </div>
-          <div className={styles.view__products}>
-            <div className={styles.products}>
-              <div className={styles.products__header}>
-                <h1 className={styles.products__heading}>Recent Products</h1>
-              </div>
-              <ul
-                className={`${styles.products__list} ${
-                  styles[`products__list--grid`]
-                }`}
+          <div className={styles.sales}>
+            <div className={styles.sales__header}>
+              <h1 className={styles.sales__heading}>Recent sales</h1>
+              <Link
+                to='/sales'
+                name='View all sales'
+                className={styles.sales__link}
               >
-                {ProductsList.map((product) => (
-                  <li
-                    key={product.id}
-                    className={`${
-                      styles.products__item
-                    } shadow shadow-xl rounded--md ${
-                      styles[`products__item--grid`]
+                View More
+              </Link>
+            </div>
+            <ul className={styles.sales__list}>
+              {RecentSales.map((product) => (
+                <li key={product.id} className={styles.sales__item}>
+                  <div
+                    className={`${styles.sales__status} ${
+                      product.hasPaid
+                        ? styles['sales__status--successful']
+                        : styles['sales__status--failed']
                     }`}
                   >
-                    <div className={styles["products__image-box"]}>
-                      <img
-                        src={product.image}
-                        alt={product.title}
-                        className={styles.products__image}
+                    <Icon.Check />
+                  </div>
+                  <div className={styles.sales__info}>
+                    <h1 className={styles.sales__title}>
+                      <span className={styles.sales__id}>
+                        {product.sales_id}
+                      </span>
+                      <span className={styles.sales__date}>
+                        <FormatDate locale='en-US' date={product.sales_date} />
+                      </span>
+                    </h1>
+                    <h1 className={styles.sales__name}>{product.sales_by}</h1>
+                  </div>
+                  <div className={styles.sales__details}>
+                    <h1 className={styles.sales__price}>
+                      <FormatNumber
+                        type='currency'
+                        amount={product.sales_cost}
+                        currency={product.currency}
+                        locale='en-US'
                       />
-                    </div>
-                    <div className={styles.products__details}>
-                      <div className={styles.products__info}>
-                        <h2 className={styles.products__title}>
-                          {product.title}
-                        </h2>
-                        <h3 className={styles.products__price}>
-                          <span>{product.currency}</span>
-                          <span>{product.price.toFixed(2)}</span>
-                        </h3>
-                      </div>
-                      <p className={styles.products__status}>
-                        {product.status}
-                      </p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          <div className={styles.sales}>
-            <h1 className={styles.sales__heading}>Recent Sales</h1>
-            <table className={styles.sales__table}>
-              <thead className={styles["sales__table--head"]}>
-                <tr className={styles["sales__table--row"]}>
-                  <td className={styles["sales__table--definition"]}>S/N</td>
-                  <td className={styles["sales__table--definition"]}>Title</td>
-                  <td className={styles["sales__table--definition"]}>Name</td>
-                  <td className={styles["sales__table--definition"]}>Price</td>
-                  <td className={styles["sales__table--definition"]}>Amount</td>
-                  <td className={styles["sales__table--definition"]}>
-                    Order Number
-                  </td>
-                  {/* <td className={styles["sales__table--definition"]}>Date</td> */}
-                </tr>
-              </thead>
-              <tbody className={styles["sales__table--body"]}>
-                {Sales.map((sale, i) => (
-                  <tr key={i} className={styles["sales__table--row--sm"]}>
-                    <td className={styles["sales__table--definition--sm"]}>
-                      {i}
-                    </td>
-                    <td className={styles["sales__table--definition--sm"]}>
-                      {sale.title}
-                    </td>
-                    <td className={styles["sales__table--definition--sm"]}>
-                      {sale.buyer}
-                    </td>
-                    <td className={styles["sales__table--definition--sm"]}>
-                      {sale.currency + " " + sale.price}
-                    </td>
-                    <td className={styles["sales__table--definition--sm"]}>
-                      {sale.totalAmount}
-                    </td>
-                    <td className={styles["sales__table--definition--sm"]}>
-                      {sale.orderNumber}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <div className={styles.view__help}>
-            <span className={styles["view__help--icon"]}>
-              <Help />
-            </span>
+                    </h1>
+                    <p
+                      className={`${styles.sales__progress} ${
+                        product.hasPaid
+                          ? styles['sales__paid']
+                          : styles['sales__not-paid']
+                      }`}
+                    >
+                      {product.hasPaid ? 'Paid' : 'Not Paid'}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
-      </main>
-      {/* mobile view */}
-      <MobileDashboard />
+      </div>
     </>
   );
 };

@@ -1,8 +1,14 @@
-import logo from "../../../assets/images/logo--2.png";
-import styles from "./LogoSidebar.module.scss";
+import styles from './LogoSidebar.module.scss';
+import { Link } from 'react-router-dom';
 
-const LogoSidebar = function (props) {
-  return <img src={logo} alt='logo' className={styles.logo__small} />;
+const LogoSidebar = function () {
+  return (
+    <div className={styles.logo}>
+      <Link to='/dashboard' className={styles.logo__link}>
+        <h1 className={styles.logo__text}>Bizz</h1>
+      </Link>
+    </div>
+  );
 };
 
 export default LogoSidebar;
