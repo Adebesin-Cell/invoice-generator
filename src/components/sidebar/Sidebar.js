@@ -16,6 +16,7 @@ const Sidebar = function () {
         <li className={styles.sidebar__item}>
           <NavLink
             to='/dashboard'
+            name='Dashboard'
             className={({ isActive }) =>
               isActive ? ActiveClass : InActiveClass
             }
@@ -29,6 +30,7 @@ const Sidebar = function () {
         <li className={styles.sidebar__item}>
           <NavLink
             to='/products'
+            name='Products'
             className={({ isActive }) =>
               isActive ? ActiveClass : InActiveClass
             }
@@ -42,6 +44,7 @@ const Sidebar = function () {
         <li className={styles.sidebar__item}>
           <NavLink
             to='/invoice'
+            name='Generate Invoice'
             className={({ isActive }) =>
               isActive ? ActiveClass : InActiveClass
             }
@@ -55,6 +58,7 @@ const Sidebar = function () {
         <li className={styles.sidebar__item}>
           <NavLink
             to='/report'
+            name='Sales Report'
             className={({ isActive }) =>
               isActive ? ActiveClass : InActiveClass
             }
@@ -67,7 +71,8 @@ const Sidebar = function () {
         </li>
         <li className={styles.sidebar__item}>
           <NavLink
-            to='/invoice'
+            to='/customers'
+            name='Customers'
             className={({ isActive }) =>
               isActive ? ActiveClass : InActiveClass
             }
@@ -81,6 +86,7 @@ const Sidebar = function () {
         <li className={styles.sidebar__item}>
           <NavLink
             to='/payment'
+            name='Payments'
             className={({ isActive }) =>
               isActive ? ActiveClass : InActiveClass
             }
@@ -93,7 +99,8 @@ const Sidebar = function () {
         </li>
         <li className={styles.sidebar__item}>
           <NavLink
-            to='/invoice'
+            to='/settings'
+            name='settings'
             className={({ isActive }) =>
               isActive ? ActiveClass : InActiveClass
             }

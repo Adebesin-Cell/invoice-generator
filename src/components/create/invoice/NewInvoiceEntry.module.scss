@@ -1,7 +1,7 @@
 .entry {
     display: flex;
     flex-wrap: wrap;
-    column-gap: var(--span-m);
+    column-gap: var(--span-s);
     row-gap: var(--span-s);
 
     @media only screen and (max-width: 600px) {
@@ -10,7 +10,7 @@
     }
 
     &:first-child {
-        padding-top: var(--span-m);
+        padding-top: var(--span-s);
     }
 
     &:first-child &__delete &__btn {
@@ -23,7 +23,7 @@
         flex-grow: 1;
 
         &--lg {
-            width: calc(33.3333% - var(--span-m));
+            width: calc(33.3333% - var(--span-s));
 
             @media only screen and (max-width: 1140px) {
                 width: 70%;
@@ -31,7 +31,7 @@
         }
 
         &--sm {
-            width: calc(16.6667% - var(--span-m));
+            width: calc(16.6667% - var(--span-s));
 
             @media only screen and (max-width: 1140px) {
                 width: 20%;
@@ -39,7 +39,7 @@
         }
 
         &--xsm {
-            width: calc(8.33333% - var(--span-m));
+            width: calc(8.33333% - var(--span-s));
 
             @media only screen and (max-width: 1140px) {
                 width: 20%;
@@ -53,9 +53,9 @@
         height: 55px;
         box-shadow: 0 0 0 1px #EEE !important;
         border: 1px solid transparent !important;
-        border-radius: 4px;
+        border-radius: 10px;
         background-color: #ffffff;
-        font-family: var(--Inter);
+        font-family: "Quicksand Light Regular";
         font-size: var(--size-s) !important;
         font-weight: var(--weight-sm);
         text-align: left;
@@ -70,7 +70,7 @@
 
         &::-webkit-input-placeholder,
         &:-ms-input-placeholder {
-            font-family: var(--Inter);
+            font-family: "Quicksand Light Regular";
             font-size: var(--size-s) !important;
             font-weight: var(--weight-sm) !important;
             text-align: left;
@@ -82,7 +82,7 @@
             color: var(--deep_blue);
             box-shadow: 0 0 0px 1000px var(--white) inset !important;
             -webkit-text-fill-color: var(--deep_blue) !important;
-            font-family: var(--Inter);
+            font-family: "Quicksand Light Regular";
             font-size: var(--size-m);
             font-weight: var(--weight-sm);
             line-height: 23px;

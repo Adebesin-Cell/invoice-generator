@@ -213,10 +213,10 @@ export const RecentProducts = [
   },
   {
     id: 3,
-    image: ProductImageTen,
-    title: 'Shirts and Shorts',
+    image: ProductImageFive,
+    title: 'Nike Sneakers',
     quantity: 15,
-    price: 3500,
+    price: 23500,
     currency: 'NGN',
   },
   {
@@ -229,7 +229,7 @@ export const RecentProducts = [
   },
   {
     id: 5,
-    image: ProductImageOne,
+    image: ProductImageThree,
     title: 'Nike Sneakers',
     quantity: 15,
     price: 15000,

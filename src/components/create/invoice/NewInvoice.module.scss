@@ -1,31 +1,11 @@
 .view {
     flex: 1 1 0%;
+    display: flex;
     position: relative;
 
     &__intro {
-        padding-top: var(--span-2xl);
-        padding-left: calc(var(--span-2xl) + var(--span-s));
-        padding-right: calc(var(--span-2xl) + var(--span-s));
-        min-height: 100vh;
-
-        @media only screen and (min-width: 1800px) {
-            padding-left: 15%;
-            padding-right: 15%;
-        }
-
-        @media only screen and (max-width: 1140px) {
-            padding-left: var(--span-2xl);
-            padding-right: var(--span-2xl);
-        }
-
-        @media only screen and (max-width: 600px) {
-            padding-left: var(--span-s);
-            padding-right: var(--span-s);
-        }
-    }
-
-    &__section {
-        padding-top: var(--span-m);
+        flex: 1 1 0%;
+        position: relative;
     }
 
     &__heading {
@@ -37,21 +17,6 @@
         line-height: 28px;
         color: var(--deep_blue);
     }
-
-    &__paragraph {
-        font-family: var(--Inter);
-        font-size: var(--size-s);
-        font-weight: var(--weight-sm);
-        text-align: left;
-        line-height: 21px;
-        color: #999;
-
-        span {
-            margin-top: var(--span-xs);
-            display: block;
-            max-width: 75%;
-        }
-    }
 }
 
 .form {
@@ -59,100 +24,16 @@
 }
 
 .invoice {
-    padding-bottom: var(--span-2xl);
-
-    &__space {
-        padding-top: var(--span-m);
-    }
-
-    &__header {
-        display: flex;
-        justify-content: space-between;
-        padding-bottom: var(--span-s);
-        border-bottom: 1px solid #EEE;
-
-        @media only screen and (max-width: 600px) {
-            flex-direction: column;
-        }
-    }
+    padding: 0 var(--span-m);
 
     &__heading {
-        font-family: var(--Inter);
+        margin-top: var(--span-s);
+        font-family: "Quicksand Bold Regular";
         font-size: var(--size-m);
-        font-weight: var(--weight-sm);
+        font-weight: var(--weight-xlg);
         text-align: left;
         line-height: 21px;
         color: var(--deep_blue);
-    }
-
-    &__body {
-        padding-top: var(--span-m);
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: var(--span-l);
-        row-gap: var(--span-s);
-
-
-        @media only screen and (max-width: 1140px) {
-            grid-template-columns: 1fr;
-        }
-    }
-
-    &__form {
-        width: 100%;
-        display: grid;
-        gap: calc(var(--span-s));
-    }
-
-    &__label {
-        position: absolute;
-        top: calc(var(--span-xs) - 4px);
-        left: calc(var(--span-xs) + 5px);
-        font-family: var(--Inter);
-        font-size: calc(var(--size-xs) - 1px);
-        font-weight: var(--weight-sm);
-        text-align: left;
-        line-height: 15px;
-        color: var(--deep_blue);
-    }
-
-    &__group {
-        position: relative;
-
-        input {
-            padding-top: calc(var(--span-s));
-        }
-
-        &--sm {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--span-l);
-        }
-
-        &--xsm {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: var(--span-l);
-
-            @media only screen and (max-width: 1140px) {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            @media only screen and (max-width: 768px) {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            @media only screen and (max-width: 600px) {
-                grid-template-columns: repeat(1, 1fr);
-                gap: var(--span-s);
-            }
-        }
-
-        &--lg {
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr;
-        }
     }
 
     &__input {
@@ -160,19 +41,15 @@
         height: 55px;
         box-shadow: 0 0 0 1px #EEE;
         border: 1px solid transparent;
-        border-radius: 4px;
+        border-radius: 10px;
         background-color: #ffffff;
-        font-family: var(--Inter);
+        font-family: "Quicksand Light Regular";
         font-size: var(--size-s) !important;
-        font-weight: var(--weight-sm);
+        font-weight: var(--weight-md);
         text-align: left;
         line-height: 16px;
-        color: var(--deep_blue);
+        color: #717171;
         transition: all 300ms;
-
-        &--lg {
-            grid-column: span 2;
-        }
 
         &:focus {
             box-shadow: 0 0 0 1px var(--bright_blue);
@@ -183,76 +60,59 @@
         &:-ms-input-placeholder {
             font-family: var(--Inter);
             font-size: var(--size-s) !important;
-            font-weight: var(--weight-sm) !important;
+            font-weight: var(--weight-md) !important;
             text-align: left;
             line-height: 16px;
-            color: var(--deep_blue);
+            color: #D9D9D9;
         }
+    }
+
+    &__form {
+        padding-top: var(--span-m);
+        padding-bottom: var(--span-xs);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--span-s);
+
+        @media only screen and (max-width: 1140px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__label {
+        font-family: "Quicksand Light Regular";
+        font-size: var(--size-xs) !important;
+        font-weight: var(--weight-md);
+        text-align: left;
+        line-height: 16px;
+        color: #717171;
+        margin-bottom: 8px;
+        display: block;
     }
 
     &__bill {
         display: grid;
-        gap: var(--span-m);
+        gap: var(--span-xs);
     }
 
     &__footer {
-        padding-top: var(--span-m);
-        border-top: 1px solid #EEE;
+        margin-top: var(--span-2xl);
         display: flex;
-        gap: var(--span-l);
-
-        @media only screen and (max-width: 600px) {
-            flex-direction: column;
-        }
+        justify-content: center;
     }
 
-    &__box {
-        flex: 1 0 40%;
-
-        @media only screen and (max-width: 600px) {
-            flex: 1 0 100%;
-        }
-    }
-
-    &__label--footer {
-        font-family: var(--Inter);
-        font-size: var(--size-s);
-        font-weight: var(--weight-sm);
-        text-align: left;
-        line-height: 16px;
-        color: var(--deep_blue);
-        display: block;
-        margin-bottom: var(--span-xs);
-    }
-
-    &__textarea {
-        display: block;
-        height: 100px;
-        width: 100%;
-    }
-
-    &__box {
-        display: flex;
-        flex-direction: column;
-    }
-
-    &__btn {
-        margin-top: auto;
-        background: var(--bright_blue);
-        font-family: var(--Inter);
-        font-size: var(--size-s);
-        font-weight: var(--weight-sm);
+    &__button {
+        height: 50px;
+        font-family: "Quicksand Bold Regular";
+        font-size: calc(var(--size-s) + 1px) !important;
+        font-weight: var(--weight-md);
         text-align: left;
         line-height: 16px;
         color: var(--white);
-        padding: calc(var(--span-xs) + 8px) var(--span-2xl);
+        background: #2a52be;
+        padding: calc(var(--span-xs) + 5px) calc(3 * var(--span-2xl));
         border-radius: 10px;
-        width: max-content;
-
-        @media only screen and (max-width: 600px) {
-            width: 100%;
-            text-align: center;
-        }
+        text-transform: uppercase;
     }
 }
 
@@ -295,45 +155,5 @@
         text-align: left;
         line-height: 16px;
         color: var(--bright_blue);
-    }
-}
-
-
-.progress {
-    display: flex;
-    gap: var(--span-s);
-    align-self: center;
-
-    @media only screen and (max-width: 600px) {
-        align-self: flex-start;
-        margin-top: var(--span-xs);
-    }
-
-    &__paragraph {
-        font-family: var(--Inter);
-        font-size: var(--size-xs);
-        font-weight: var(--weight-md);
-        text-align: left;
-        line-height: 21px;
-        color: var(--deep_blue);
-        text-transform: uppercase;
-    }
-
-    &__dots {
-        align-self: center;
-        display: flex;
-        list-style-type: none;
-        gap: var(--span-xs);
-    }
-
-    &__dot {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        background: #d2d5d9;
-
-        &--active {
-            background: var(--bright_blue);
-        }
     }
 }

@@ -1,22 +1,23 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import uuid from "react-uuid";
-import styles from "./NewInvoice.module.scss";
-import Header from "../header/Header";
-import Input from "../../UI/input/Input";
-import NewEntry from "./NewInvoiceEntry";
-import { ReactComponent as Add } from "../../../assets/svgs/icon-add.svg";
-import Button from "../../UI/button/Button";
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import uuid from 'react-uuid';
+import styles from './NewInvoice.module.scss';
+import Input from '../../UI/input/Input';
+import NewEntry from './NewInvoiceEntry';
+import { ReactComponent as Add } from '../../../assets/svgs/icon-add.svg';
+import Button from '../../UI/button/Button';
+import Sidebar from '../../sidebar/Sidebar';
+import Topbar from '../../topbar/Topbar';
 
 const NewInvoice = function () {
   const [items, setItems] = useState([
     {
       id: uuid(),
-      title: "",
-      description: "",
-      quantity: "",
-      price: "",
-      amount: "",
+      title: '',
+      description: '',
+      quantity: '',
+      price: '',
+      amount: '',
     },
   ]);
 
@@ -27,11 +28,11 @@ const NewInvoice = function () {
       ...prevItems,
       {
         id: uuid(),
-        title: "",
-        description: "",
-        quantity: "",
-        price: "",
-        amount: "",
+        title: '',
+        description: '',
+        quantity: '',
+        price: '',
+        amount: '',
       },
     ]);
   };
@@ -44,109 +45,116 @@ const NewInvoice = function () {
 
   const formSubmitHandler = function (e) {
     e.preventDefault();
-    navigate("/preview/invoice", { replace: true });
+    navigate('/preview/invoice', { replace: true });
   };
 
   return (
     <form action='' className={styles.form} onSubmit={formSubmitHandler}>
       <div className={styles.view}>
-        <Header id={"WP-12346-csc"} site='Create' directory='invoice' />
+        <Sidebar />
         <main className={styles.view__intro}>
-          <div className={styles.view__section}>
-            <h1 className={styles.view__heading}>Invoice Generator</h1>
-          </div>
+          <Topbar title='Invoice' />
           <section className={styles.invoice}>
-            <div
-              className={`${styles.invoice__header} ${styles.invoice__space}`}
-            >
-              <h1 className={styles.invoice__heading}>
-                Enter customer and invoice information
-              </h1>
-              <div className={styles.progress}>
-                <p className={styles.progress__paragraph}>Step 1 of 2</p>
-                <ul className={styles.progress__dots}>
-                  <li
-                    className={`${styles.progress__dot} ${styles["progress__dot--active"]}`}
-                  >
-                    &nbsp;
-                  </li>
-                  <li className={`${styles.progress__dot}`}>&nbsp;</li>
-                </ul>
+            <h1 className={styles.invoice__heading}>Client Details</h1>
+            <div className={styles.invoice__form}>
+              <div className={styles.invoice__group}>
+                <label
+                  className={styles.invoice__label}
+                  htmlFor='customer-name'
+                >
+                  Customer Name
+                </label>
+                <Input
+                  className={styles.invoice__input}
+                  placeholder='Customer Name'
+                  type='text'
+                  name='customer-name'
+                  aria-label='customer-name'
+                  role='customer-name input'
+                ></Input>
+              </div>
+              <div className={styles.invoice__group}>
+                <label
+                  className={styles.invoice__label}
+                  htmlFor='customer-email'
+                >
+                  Customer Email
+                </label>
+                <Input
+                  className={styles.invoice__input}
+                  placeholder='Customer Email'
+                  type='text'
+                  name='customer-email'
+                  aria-label='customer-email'
+                  role='customer-email input'
+                ></Input>
+              </div>
+              <div className={styles.invoice__group}>
+                <label
+                  className={styles.invoice__label}
+                  htmlFor='customer-phone'
+                >
+                  Customer Phone
+                </label>
+                <Input
+                  className={styles.invoice__input}
+                  placeholder='Customer Phone'
+                  type='text'
+                  name='customer-phone'
+                  aria-label='customer-phone'
+                  role='customer-phone input'
+                ></Input>
+              </div>
+              <div className={styles.invoice__group}>
+                <label
+                  className={styles.invoice__label}
+                  htmlFor='customer-city'
+                >
+                  Customer City
+                </label>
+                <Input
+                  className={styles.invoice__input}
+                  placeholder='Customer City'
+                  type='text'
+                  name='customer-city'
+                  aria-label='customer-city'
+                  role='customer-city input'
+                ></Input>
+              </div>
+              <div className={styles.invoice__group}>
+                <label
+                  className={styles.invoice__label}
+                  htmlFor='customer-address-1'
+                >
+                  Customer Address 1
+                </label>
+                <Input
+                  className={styles.invoice__input}
+                  placeholder='Customer Address 1'
+                  type='text'
+                  name='customer-address-1'
+                  aria-label='customer-address-1'
+                  role='customer-address-1 input'
+                ></Input>
+              </div>
+              <div className={styles.invoice__group}>
+                <label
+                  className={styles.invoice__label}
+                  htmlFor='customer-address-2'
+                >
+                  Customer Address 2
+                </label>
+                <Input
+                  className={styles.invoice__input}
+                  placeholder='Customer Address 2'
+                  type='text'
+                  name='customer-address-2'
+                  aria-label='customer-address-2'
+                  role='customer-address-2 input'
+                ></Input>
               </div>
             </div>
-            <div className={styles.invoice__body}>
-              <div className={styles.invoice__form}>
-                <div className={styles["invoice__group--xsm"]}>
-                  <Input
-                    type='text'
-                    className={styles.invoice__input}
-                    placeholder={`Your Customer's name`}
-                    name={`Your Customer's name`}
-                    aria-label={`Your Customer's name`}
-                    role='Invoice input'
-                  />
-                  <Input
-                    type='email'
-                    className={styles.invoice__input}
-                    placeholder={`Your Customer's email`}
-                    name={`Your Customer's email`}
-                    aria-label={`Your Customer's email`}
-                    role='Invoice input'
-                  />
-                  <div className={styles.invoice__group}>
-                    <span className={styles.invoice__label}>Invoice date</span>
-                    <Input
-                      type='date'
-                      className={styles.invoice__input}
-                      placeholder='2022-07-01'
-                      name='Invoice date'
-                      value='2022-07-01'
-                      aria-label='Invoice date'
-                      role='Invoice input'
-                      onChange={() => console.log("changed")}
-                    />
-                  </div>
-                  <Input
-                    type='text'
-                    className={`${styles.invoice__input}`}
-                    placeholder={`Customer's address`}
-                    name={`Customer's address`}
-                    aria-label={`Customer's address`}
-                    role='Invoice input'
-                  />
-                  <Input
-                    type='text'
-                    className={styles.invoice__input}
-                    placeholder='City'
-                    name='City'
-                    aria-label='City'
-                    role='Invoice input'
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              className={`${styles.invoice__header} ${styles.invoice__space}`}
-            >
-              <h1 className={styles.invoice__heading}>
-                Enter the items you wish to bill
-              </h1>
-              <div className={styles.progress}>
-                <p className={styles.progress__paragraph}>Step 2 of 2</p>
-                <ul className={styles.progress__dots}>
-                  <li
-                    className={`${styles.progress__dot} ${styles["progress__dot--active"]}`}
-                  >
-                    &nbsp;
-                  </li>
-                  <li
-                    className={`${styles.progress__dot} ${styles["progress__dot--active"]}`}
-                  >
-                    &nbsp;
-                  </li>
-                </ul>
-              </div>
-            </div>
+            <h1 className={styles.invoice__heading}>Items and Pricing</h1>
             <div className={styles.invoice__bill}>
               {items.map((item) => (
                 <NewEntry
@@ -165,34 +173,17 @@ const NewInvoice = function () {
                 <span className={styles.add__icon}>
                   <Add />
                 </span>
-                <p className={styles.add__text}>Add a line item</p>
+                <p className={styles.add__text}>Add Row</p>
               </Button>
             </div>
             <div className={styles.invoice__footer}>
-              <div className={styles.invoice__box}>
-                <label
-                  htmlFor='notes'
-                  className={styles["invoice__label--footer"]}
-                >
-                  Notes / Memo
-                </label>
-                <textarea
-                  name='notes'
-                  id='notes'
-                  cols='30'
-                  rows='10'
-                  className={`${styles.invoice__textarea} ${styles.invoice__input}`}
-                ></textarea>
-              </div>
-              <div className={styles.invoice__box}>
-                <Button
-                  type='submit'
-                  className={styles.invoice__btn}
-                  role='submit'
-                >
-                  Submit
-                </Button>
-              </div>
+              <Button
+                className={styles.invoice__button}
+                type='submit'
+                role='submit'
+              >
+                Save
+              </Button>
             </div>
           </section>
         </main>

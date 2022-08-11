@@ -1,10 +1,10 @@
-import { useState } from "react";
-import Button from "../../UI/button/Button";
-import Input from "../../UI/input/Input";
-import styles from "./NewInvoiceEntry.module.scss";
-import { ReactComponent as Close } from "../../../assets/svgs/icon-close-sharp.svg";
+import { useState } from 'react';
+import Button from '../../UI/button/Button';
+import Input from '../../UI/input/Input';
+import styles from './NewInvoiceEntry.module.scss';
+import { ReactComponent as Close } from '../../../assets/svgs/icon-close-sharp.svg';
 
-const NewEntry = function ({ id, onDelete, ...props }) {
+const NewEntry = function ({ id, onDelete }) {
   const [currentPrice, setCurrentPrice] = useState(0);
   const [currentAmount, setCurrentAmount] = useState(0);
 
@@ -22,7 +22,7 @@ const NewEntry = function ({ id, onDelete, ...props }) {
 
   return (
     <div className={styles.entry} id={id}>
-      <div className={`${styles.entry__group} ${styles["entry__group--sm"]}`}>
+      <div className={`${styles.entry__group} ${styles['entry__group--lg']}`}>
         <Input
           placeholder='Item'
           type='text'
@@ -31,24 +31,11 @@ const NewEntry = function ({ id, onDelete, ...props }) {
           aria-label='Item'
           role='Invoice input'
           onChange={() => {
-            console.log("hey");
+            console.log('hey');
           }}
         />
       </div>
-      <div className={`${styles.entry__group} ${styles["entry__group--lg"]}`}>
-        <Input
-          placeholder='Description'
-          type='text'
-          className={styles.entry__input}
-          name='Description'
-          aria-label='Description'
-          role='Invoice input'
-          onChange={() => {
-            console.log("hey");
-          }}
-        />
-      </div>
-      <div className={`${styles.entry__group} ${styles["entry__group--sm"]}`}>
+      <div className={`${styles.entry__group} ${styles['entry__group--sm']}`}>
         <Input
           placeholder='Quantity'
           type='number'
@@ -61,7 +48,17 @@ const NewEntry = function ({ id, onDelete, ...props }) {
           onChange={amountChangeHandler}
         />
       </div>
-      <div className={`${styles.entry__group} ${styles["entry__group--sm"]}`}>
+      <div className={`${styles.entry__group} ${styles['entry__group--sm']}`}>
+        <Input
+          placeholder='Discount'
+          type='number'
+          className={styles.entry__input}
+          name='Discount'
+          aria-label='Discount'
+          role='Invoice input'
+        />
+      </div>
+      <div className={`${styles.entry__group} ${styles['entry__group--sm']}`}>
         <Input
           placeholder='Price'
           type='number'
@@ -74,13 +71,13 @@ const NewEntry = function ({ id, onDelete, ...props }) {
           onChange={priceChangeHandler}
         />
       </div>
-      <div className={`${styles.entry__group} ${styles["entry__group--xsm"]}`}>
+      <div className={`${styles.entry__group} ${styles['entry__group--xsm']}`}>
         <div className={styles.entry__amount}>
           <h1>Amount</h1>
-          <p>{`₦${(currentAmount * currentPrice).toFixed(2)}`}</p>
+          <p>{`${(currentAmount * currentPrice).toFixed(2)}`}</p>
         </div>
       </div>
-      <div className={`${styles.entry__group} ${styles["entry__group--xsm"]}`}>
+      <div className={`${styles.entry__group} ${styles['entry__group--xsm']}`}>
         <div className={styles.entry__delete}>
           <Button
             type='button'
