@@ -1,22 +1,23 @@
-import styles from "./NewProduct.style.module.scss";
-import Header from "../header/Header";
-import Input from "../../UI/input/Input";
-import { useState } from "react";
-import { ReactComponent as Camera } from "../../../assets/svgs/icon-camera.svg";
-import Button from "../../UI/button/Button";
+import styles from './NewProduct.style.module.scss';
+import Sidebar from '../../sidebar/Sidebar';
+import Input from '../../UI/input/Input';
+import { useState } from 'react';
+import { ReactComponent as Camera } from '../../../assets/svgs/icon-camera.svg';
+import Button from '../../UI/button/Button';
+import Topbar from '../../topbar/Topbar';
 
-const NewProduct = function (props) {
+const NewProduct = function () {
   const [selectedFile, setSelectedFile] = useState();
 
   const fileUploadHandler = function (event) {
     setSelectedFile(event.target.files[0]);
-    console.log(selectedFile);
   };
 
   return (
     <div className={styles.product}>
-      <Header id='WP-12346-csc' site='Create' directory='product' />
+      <Sidebar />
       <main className={styles.product__intro}>
+        <Topbar title='Products'></Topbar>
         <div className={styles.product__section}>
           <h1 className={styles.product__heading}>Add Product</h1>
           <form action='' className={styles.form}>
@@ -39,7 +40,7 @@ const NewProduct = function (props) {
                     <Camera />
                   </div>
                   <p className={styles.form__text}>
-                    {selectedFile ? selectedFile.name : "Upload product image"}
+                    {selectedFile ? selectedFile.name : 'Upload product image'}
                   </p>
                 </label>
               </div>
@@ -91,13 +92,15 @@ const NewProduct = function (props) {
                 >
                   Product Category
                 </label>
-                <Input
-                  id='product-category'
+                <select
                   name='product-category'
-                  type='text'
                   className={styles.form__input}
-                  placeholder='Product Category'
-                />
+                  id='product-category'
+                >
+                  <option value=''>-- select product category--</option>
+                  <option value='gadget'>Gadget</option>
+                  <option value='clothing'>Clothing</option>
+                </select>
               </div>
               <div className={styles.form__group}>
                 <label htmlFor='discount' className={styles.form__label}>

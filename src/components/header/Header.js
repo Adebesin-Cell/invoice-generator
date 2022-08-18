@@ -1,10 +1,10 @@
-import styles from "./Header.module.scss";
-import Button from "../UI/button/Button";
-import LogoMobile from "../UI/logo/LogoMobile";
-import { ReactComponent as Menu } from "../../assets/svgs/icon-menu-smooth.svg";
-import ProfileIcon from "../profile/ProfileIcon";
+import styles from './Header.module.scss';
+import Button from '../UI/button/Button';
+import LogoMobile from '../UI/logo/LogoMobile';
+import { ReactComponent as Menu } from '../../assets/svgs/icon-menu-smooth.svg';
+import ProfileIcon from '../profile/ProfileIcon';
 
-const Header = function (props) {
+const Header = function () {
   return (
     <header className={styles.header}>
       <div className={styles.header__wrapper}>

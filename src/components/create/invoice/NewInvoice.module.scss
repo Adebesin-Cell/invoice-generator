@@ -58,9 +58,9 @@
 
         &::-webkit-input-placeholder,
         &:-ms-input-placeholder {
-            font-family: var(--Inter);
+            font-family: "Quicksand Light Regular";
             font-size: var(--size-s) !important;
-            font-weight: var(--weight-md) !important;
+            font-weight: var(--weight-md);
             text-align: left;
             line-height: 16px;
             color: #D9D9D9;
