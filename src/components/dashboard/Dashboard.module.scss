@@ -8,6 +8,10 @@
         display: grid;
         grid-template-columns: 1.5fr 1fr;
         gap: var(--span-s);
+
+        @media only screen and (max-width: 1140px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
 
     &__container {
@@ -15,6 +19,10 @@
         display: grid;
         grid-template-columns: 1.5fr 1fr;
         gap: var(--span-s);
+
+        @media only screen and (max-width: 1140px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
 }
 
