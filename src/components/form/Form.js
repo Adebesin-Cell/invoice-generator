@@ -1,15 +1,15 @@
-import styles from "./Form.module.scss";
-import Input from "../UI/input/Input";
-import { Link, useNavigate } from "react-router-dom";
-import Button from "../UI/button/Button";
-import Checkbox from "../UI/checkbox/Checkbox";
+import styles from './Form.module.scss';
+import Input from '../UI/input/Input';
+import { Link, useNavigate } from 'react-router-dom';
+import Button from '../UI/button/Button';
+import Checkbox from '../UI/checkbox/Checkbox';
 
 const Form = function () {
   const navigate = useNavigate();
 
   const formSubmitHandler = function (e) {
     e.preventDefault();
-    navigate("/dashboard", { replace: true });
+    navigate('/dashboard', { replace: true });
   };
 
   return (
@@ -48,26 +48,26 @@ const Form = function () {
           Forgot Password?
         </Link>
       </div>
-      <div className={`${styles.form__group} ${styles["form__button--box"]}`}>
+      <div className={`${styles.form__group} ${styles['form__button--box']}`}>
         <Button
           text='Login'
           role='submit'
           type='submit'
-          className={`${styles.form__button} ${styles["form__button--blue"]}`}
+          className={`${styles.form__button} ${styles['form__button--blue']}`}
         >
           Login
         </Button>
         <Link
           to='/register'
-          className={`${styles.form__button} ${styles["form__button--white"]}`}
+          className={`${styles.form__button} ${styles['form__button--white']}`}
         >
           Register
         </Link>
       </div>
       <div className={styles.form__agreement}>
-        <p className={styles["form__agreement--text"]}>
-          By signin up, you agree to our{" "}
-          <Link to='our-terms'>Terms and Conditions</Link> &{" "}
+        <p className={styles['form__agreement--text']}>
+          By signin up, you agree to our{' '}
+          <Link to='our-terms'>Terms and Conditions</Link> &{' '}
           <Link to='/our-policy'>Privacy Policy</Link>.
         </p>
       </div>
