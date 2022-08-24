@@ -1,5 +1,5 @@
-import { Route, Routes, useLocation } from "react-router-dom";
-import NavigationContext from "./store/navigation-context";
+import { Route, Routes, useLocation } from 'react-router-dom';
+import NavigationContext from './store/navigation-context';
 import {
   Dashboard,
   Login,
@@ -15,8 +15,9 @@ import {
   NewProduct,
   EditProduct,
   ViewProduct,
-} from "./pages";
-import InvoiceTemplate from "./components/preview/invoice/InvoiceTemplate";
+  AddProductCategory,
+} from './pages';
+import InvoiceTemplate from './components/preview/invoice/InvoiceTemplate';
 
 function App() {
   const { pathname } = useLocation();
@@ -42,6 +43,10 @@ function App() {
         <Route path='/products' element={<Product />}></Route>
         <Route path='/products/:productid' element={<ViewProduct />}></Route>
         <Route path='/products/add' element={<NewProduct />}></Route>
+        <Route
+          path='/products/add-category'
+          element={<AddProductCategory />}
+        ></Route>
         <Route
           path='/products/edit/:productid'
           element={<EditProduct />}

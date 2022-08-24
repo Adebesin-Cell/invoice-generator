@@ -18,6 +18,9 @@
         border-radius: 10px !important;
 
         &--blue {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             background: #2a52be !important;
         }
     }
@@ -59,6 +62,11 @@
         color: #717171;
     }
 
+    &__action {
+        display: flex;
+        gap: var(--span-s);
+    }
+
     &__button {
         font-family: "Quicksand Light Regular";
         font-size: calc(var(--size-s));
@@ -70,6 +78,10 @@
         background: #2a52be;
         padding: var(--span-xs) var(--span-m);
         border-radius: 5px;
+
+        &--green {
+            background: #128C7E;
+        }
     }
 
     &__tableWrapper {
