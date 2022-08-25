@@ -152,3 +152,116 @@
         padding: var(--span-xs);
     }
 }
+
+.report {
+    display: flex;
+    flex-direction: column;
+
+    &__body {
+        padding-top: var(--span-s);
+    }
+
+    &__heading {
+        font-family: "Quicksand Bold Regular";
+        font-size: var(--size-s);
+        font-weight: var(--weight-xlg);
+        line-height: 15px;
+        letter-spacing: 0.05em;
+        text-align: left;
+        color: #000000;
+        display: flex;
+        align-items: center;
+        gap: var(--span-s);
+    }
+
+    &__icon {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        background: #2B50ED;
+
+        svg {
+            width: 8px;
+            height: 8px;
+        }
+    }
+
+    &__list {
+        list-style-type: none;
+        margin-top: calc(var(--span-xs) + 5px);
+
+        &:not(:last-child) {
+            margin-bottom: var(--span-m);
+        }
+    }
+
+    &__item {
+        display: flex;
+        gap: var(--span-m);
+
+        &:not(:last-child) {
+            margin-bottom: var(--span-xs);
+        }
+    }
+
+    &__key {
+        min-width: 100px;
+        font-family: "Quicksand Light Regular";
+        font-size: var(--size-s);
+        font-weight: var(--weight-lg);
+        line-height: 15px;
+        letter-spacing: 0.02em;
+        text-align: left;
+        color: #000000;
+    }
+
+    &__value {
+        font-family: "Quicksand Light Regular";
+        font-size: var(--size-s);
+        font-weight: var(--weight-2xxlg);
+        line-height: 15px;
+        letter-spacing: 0.02em;
+        text-align: left;
+        color: #000000;
+    }
+
+    &__table {
+        padding: calc(var(--span-xs) + 5px);
+        background: #FFFFFF;
+        border: 1px solid #E7EDF5;
+        width: 100%;
+        border-radius: 15px;
+
+        thead {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            display: none;
+        }
+
+        td {
+            vertical-align: top;
+            font-family: "Quicksand Light Regular";
+            font-size: calc(var(--size-s));
+            font-weight: var(--weight-xlg);
+            line-height: 21px;
+            letter-spacing: 0.05em;
+            text-align: left;
+            color: #000000;
+        }
+    }
+
+    &__tableBody {
+        td {
+            &:not(:last-child) {
+                padding-bottom: calc(var(--span-xs) + 2px);
+            }
+        }
+    }
+}
