@@ -1,0 +1,93 @@
+@keyframes fadeIn {
+    from {
+        transform: translate(-50%, -30%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+
+.modal {
+    background: var(--white);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+    z-index: 10;
+    max-width: 780px;
+    width: 100%;
+    max-height: 90vh;
+    height: 90vh;
+    animation: fadeIn 300ms linear 1;
+
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        background: rgba(34, 34, 34, 0.6);
+        z-index: 10;
+    }
+
+    &__header {
+        display: flex;
+        padding: var(--span-s) var(--span-m);
+        padding-bottom: var(--span-s);
+        margin: 0 calc(-1 * var(--span-xs));
+        position: sticky;
+        background: var(--white);
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        border-bottom: 1px solid #DFDDDD;
+        // height: 90px;
+
+        &--withtitle {
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__heading {
+        font-family: "Quicksand Bold Regular";
+        font-size: calc(var(--size-m));
+        font-weight: var(--weight-xlg);
+        line-height: 21px;
+        letter-spacing: 0.05em;
+        text-align: left;
+        color: #000000;
+    }
+
+    &__action {
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        transition: all 300ms;
+        color: rgba(34, 34, 34, 1);
+
+        &:hover {
+            background: #eeeeee;
+        }
+
+        svg {
+            width: 21px;
+            height: 21px;
+        }
+    }
+
+    &__body {
+        // padding-top: var(--span-s);
+        overflow-y: auto;
+        height: calc(100% - 90px);
+        padding-left: var(--span-s);
+        padding-right: calc(var(--span-l));
+    }
+}
