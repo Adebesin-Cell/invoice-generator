@@ -1,6 +1,5 @@
 import Topbar from '../topbar/Topbar';
 import styles from './CustomersList.module.scss';
-import { Link } from 'react-router-dom';
 import Button from '../UI/button/Button';
 import * as Icon from 'react-feather';
 import Modal from '../modal/Modal';
