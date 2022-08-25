@@ -13,3 +13,4 @@ export { default as NewProduct } from './AddProducts';
 export { default as EditProduct } from './EditProduct';
 export { default as ViewProduct } from './ViewProduct';
 export { default as AddProductCategory } from './AddProductCategory';
+export { default as CustomersPage } from './Customers';

@@ -16,6 +16,7 @@ import {
   EditProduct,
   ViewProduct,
   AddProductCategory,
+  CustomersPage,
 } from './pages';
 import InvoiceTemplate from './components/preview/invoice/InvoiceTemplate';
 
@@ -53,6 +54,7 @@ function App() {
         ></Route>
         <Route path='/order' element={<Order />}></Route>
         <Route path='/contact' element={<Contact />}></Route>
+        <Route path='/customers' element={<CustomersPage />}></Route>
         <Route path='*' element={<NotFound />}></Route>
       </Routes>
     </NavigationContext.Provider>
