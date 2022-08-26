@@ -57,7 +57,7 @@
         font-family: "Quicksand Bold Regular";
         font-size: calc(var(--size-m) + 4px);
         line-height: 25px;
-        letter-spacing: 0.05em;
+        letter-spacing: 0;
         text-align: left;
         color: #E4E4E4;
 
@@ -66,7 +66,7 @@
             font-weight: var(--weight-xlg);
             font-size: calc(var(--size-s) - 1px);
             line-height: 21px;
-            letter-spacing: 0.05em;
+            letter-spacing: 0;
             text-align: left;
             color: #E4E4E4;
         }
@@ -78,7 +78,7 @@
         font-size: calc(var(--size-xl) + 4px);
         font-weight: 600;
         line-height: 45px;
-        letter-spacing: 0.05em;
+        letter-spacing: 0;
         text-align: left;
         color: #E4E4E4;
 
@@ -87,7 +87,7 @@
             font-size: calc(var(--size-l) + 4px);
             font-weight: 600;
             line-height: 32px;
-            letter-spacing: 0.05em;
+            letter-spacing: 0;
             text-align: left;
             color: #E4E4E4;
         }
