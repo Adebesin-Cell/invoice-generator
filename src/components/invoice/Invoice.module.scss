@@ -36,7 +36,7 @@
         font-family: "Quicksand Bold Regular";
         font-size: calc(var(--size-xl) + 4px);
         line-height: 40px;
-        letter-spacing: 0.05em;
+        letter-spacing: 0;
         text-align: left;
         color: #E7EDF5;
     }
@@ -113,7 +113,7 @@
             line-height: 21px;
             letter-spacing: 0.05em;
             text-align: left;
-            color: #505d69;
+            color: #000000;
         }
     }
 
