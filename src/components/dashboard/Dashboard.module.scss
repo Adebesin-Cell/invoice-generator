@@ -24,6 +24,10 @@
             grid-template-columns: repeat(1, 1fr);
         }
     }
+
+    &__modal {
+        padding: var(--span-xs);
+    }
 }
 
 .card {
@@ -265,6 +269,11 @@
     &__item {
         display: flex;
         justify-content: space-between;
+        cursor: pointer;
+
+        &:not(:last-child) {
+            margin-bottom: var(--span-xs);
+        }
     }
 
     &__status {
@@ -294,6 +303,175 @@
     &__info {
         margin-left: calc(var(--span-xs) + 5px);
         margin-right: auto;
+    }
+
+    &__id {
+        font-weight: var(--weight-xlg);
+        color: #1E1E1E;
+        padding-right: 5px;
+        border-right: 1px solid #585858;
+    }
+
+    &__date {
+        font-weight: var(--weight-md);
+        color: #585858;
+        padding-left: 5px;
+    }
+
+    &__title {
+        font-family: "Quicksand Light Regular";
+        font-size: calc(var(--size-xs) + 1px);
+        line-height: 18px;
+        letter-spacing: 0.05em;
+        text-align: left;
+        display: flex;
+    }
+
+    &__name {
+        font-family: "Quicksand Light Regular";
+        font-size: calc(var(--size-xs) + 1px);
+        line-height: 18px;
+        letter-spacing: 0.05em;
+        text-align: left;
+        font-weight: var(--weight-lg);
+        color: #585858;
+    }
+
+    &__price {
+        font-family: "Quicksand Light Regular";
+        font-size: calc(var(--size-xs));
+        line-height: 18px;
+        letter-spacing: 0.02em;
+        text-align: left;
+        font-weight: var(--weight-lg);
+        color: #1E1E1E;
+    }
+
+    &__progress {
+        margin-top: 2px;
+        font-family: "Quicksand Light Regular";
+        font-size: calc(var(--size-xs) + 1px);
+        font-weight: var(--weight-md);
+        line-height: 15px;
+        letter-spacing: 0.05em;
+        text-align: left;
+    }
+
+    &__paid {
+        color: #2a52be;
+    }
+
+    &__not-paid {
+        color: #EA643A;
+    }
+}
+
+.customer {
+    display: flex;
+    flex-direction: column;
+
+    &__body {
+        padding-top: var(--span-s);
+    }
+
+    &__heading {
+        font-family: "Quicksand Bold Regular";
+        font-size: var(--size-s);
+        font-weight: var(--weight-xlg);
+        line-height: 15px;
+        letter-spacing: 0.05em;
+        text-align: left;
+        color: #000000;
+        display: flex;
+        align-items: center;
+        gap: var(--span-s);
+    }
+
+    &__list {
+        list-style-type: none;
+        margin-top: calc(var(--span-xs) + 5px);
+
+        &:not(:last-child) {
+            margin-bottom: var(--span-m);
+        }
+    }
+
+    &__item {
+        display: flex;
+        gap: var(--span-m);
+
+        &:not(:last-child) {
+            margin-bottom: var(--span-xs);
+        }
+    }
+
+    &__key {
+        min-width: 100px;
+        font-family: "Quicksand Light Regular";
+        font-size: var(--size-s);
+        font-weight: var(--weight-lg);
+        line-height: 15px;
+        letter-spacing: 0.02em;
+        text-align: left;
+        color: #000000;
+    }
+
+    &__value {
+        font-family: "Quicksand Light Regular";
+        font-size: var(--size-s);
+        font-weight: var(--weight-2xxlg);
+        line-height: 15px;
+        letter-spacing: 0.02em;
+        text-align: left;
+        color: #000000;
+    }
+}
+
+.transaction {
+    &__list {
+        margin-top: var(--span-s);
+        list-style-type: none;
+    }
+
+    &__item {
+        display: flex;
+
+        &:not(:last-child) {
+            margin-bottom: var(--span-s);
+        }
+    }
+
+    &__icon {
+        margin-right: var(--span-s);
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+
+        &--success {
+            background: #2B50ED;
+        }
+
+        &--failed {
+            background: #EA643A;
+        }
+
+        svg {
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    &__info {
+        margin-right: auto;
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
     }
 
     &__id {
